@@ -5,3 +5,4 @@ RewriteRule ^sign-up$                   index.php?c=user&a=signUp
 RewriteRule ^sign-in$                   index.php?c=user&a=signIn
 RewriteRule ^dashboard$                 index.php?c=user&a=dashboard
 RewriteRule ^type-indicator$            index.php?c=typeIndicator
+RewriteRule ^indicator$                 index.php?c=indicator

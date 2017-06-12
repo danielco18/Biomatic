@@ -12,17 +12,16 @@
                                         <div class="form-group">
                                             <label for="nameTypeIndicator" class="form-label">Nombre</label>
                                             <input type="text" name="data[]" class="form-control form-input" id="nameTypeIndicator" aria-describedby="nameTypeIndHelp" required>
-                                            <small id="nameTypeIndHelp" class="form-text text-muted">El nombre del indicador ya existe en la aplicación.</small>
                                         </div>
                                         <div class="form-group">
                                             <label for="descTypeIndicator" class="form-label">Descripción</label>
-                                            <textarea name="data[]" class="form-control form-input" id="descTypeIndicator" required></textarea>
+                                            <input type="text" name="data[]" class="form-control form-input" id="descTypeIndicator" required>
                                         </div>
                                         <div class="form-group">
                                             <label for="stateTypeIndicator" class="form-label">Estado</label>
                                             <input type="text" name="data[]" class="form-control form-input" id="stateTypeIndicator" required>
 
-                                        </div>  
+                                        </div>
                                         <div class="button-container">
                                             <button class="form-button" id="butonSignIn">CREAR</button>
                                         </div>
@@ -30,4 +29,4 @@
                                 </form>
                             </div>
                         </div>
-                        <?php require_once 'views/modules/indicator_mod/typeIndicator_manage/main.typeInd.php';; ?>
+                        <?php require_once 'views/modules/indicator_mod/typeIndicator_manage/main.typeInd.php'; ?>

@@ -1,4 +1,4 @@
-<?php  
+<?php
 
     class TypeindicatorModel extends DataBase{
         private $pdo;
@@ -18,7 +18,7 @@
                 $query->execute(array($data[3],$data[0],$data[1],$data[2]));
                 $result = "Datos ingresados correctamente";
             } catch (PDOException $e) {
-                die($e->getMessage()." ".$e->getLine()." ".$e->getFile());   
+                die($e->getMessage()." ".$e->getLine()." ".$e->getFile());
             }
             return $result;
         }
@@ -51,7 +51,7 @@
             try {
                 $sql = "UPDATE type_indicator SET typeIn_name = ?, typeIn_desc = ?, typeIn_state = ? WHERE typeIn_code = ?";
                 $query = $this->pdo->prepare($sql);
-                $query->execute(array($data[3],$data[0],$data[1],$data[2]));
+                $query->execute(array($data[0],$data[1],$data[2],$data[3]));
                 $result = "Datos actualizados correctamente";
             } catch (PDOException $e) {
                 die($e->getMessage()." ".$e->getLine()." ".$e->getFile());
