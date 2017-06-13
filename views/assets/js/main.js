@@ -28,7 +28,6 @@ $('#dataTable').DataTable({
 $(".email").focus(function(){
    $(this).siblings("span").remove();
    $(".form-button").attr("disabled",false);
-   // swal("Good job!", "You clicked the button!", "success")
 })
 
 $('#emailSignUp').focusout(function(){

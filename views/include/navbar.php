@@ -7,6 +7,12 @@
                 <nav>
                     <ul class="menu">
                         <li class="menu-item">
+                            <a href="dashboard" class="menu-link">
+                                <i class="material-icons menu-icons">done</i>
+                                <span class="menu-subtext">GRÁFICAS<span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
                             <a href="type-indicator" class="menu-link">
                                 <i class="material-icons menu-icons">done</i>
                                 <span class="menu-subtext">GESTIONAR TIPO IND<span>
@@ -21,19 +27,25 @@
                         <li class="menu-item">
                             <a href="" class="menu-link">
                                 <i class="material-icons menu-icons">done</i>
-                                <span class="menu-subtext">Hola<span>
+                                <span class="menu-subtext">SEMILLERO DE INVESTIGACIÓN<span>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="" class="menu-link">
                                 <i class="material-icons menu-icons">done</i>
-                                <span class="menu-subtext">Hola<span>
+                                <span class="menu-subtext">PONENCIAS<span>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="" class="menu-link">
                                 <i class="material-icons menu-icons">done</i>
-                                <span class="menu-subtext">Hola<span>
+                                <span class="menu-subtext">TIPO DE PUBLICACIÓN<span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="" class="menu-link">
+                                <i class="material-icons menu-icons">done</i>
+                                <span class="menu-subtext">NÚMERO DE PROYECTOS<span>
                             </a>
                         </li>
                     </ul>

@@ -15,7 +15,7 @@
             try {
                 $sql = "INSERT INTO type_indicator VALUES (?,?,?,?)";
                 $query = $this->pdo->prepare($sql);
-                $query->execute(array($data[3],$data[0],$data[1],$data[2]));
+                $query->execute(array($data[3],$data[0],$data[1],"Activo"));
                 $result = "Datos ingresados correctamente";
             } catch (PDOException $e) {
                 die($e->getMessage()." ".$e->getLine()." ".$e->getFile());

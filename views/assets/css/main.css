@@ -233,6 +233,11 @@ table{
     cursor: not-allowed;
 }
 
+select{
+    padding: 5px !important;
+    width: 100% !important;
+}
+
 .text-muted{
     color: red !important;
     font-family: 'Open Sans', sans-serif;
@@ -300,7 +305,8 @@ table{
 }
 
 .menu-subtext{
-    padding-left: 8px;
+    padding-left: 3px;
+    font-size: 14px !important;
 }
 
 .info-container{

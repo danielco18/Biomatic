@@ -55,7 +55,7 @@
                 $_SESSION["user"]["name"] = $userData["user_name"];
                 $_SESSION["user"]["lastname"] = $userData["user_lastName"];
                 $_SESSION["user"]["email"] = $userData["user_email"];
-                $return = array(true, "dashboard");
+                $return = array(true, "type-indicator");
             } else {
                 $return = array(false, "Contraseña incorrecta");
             }
@@ -72,7 +72,7 @@
                 $_SESSION["user"]["name"] = $data[0];
                 $_SESSION["user"]["lastname"] = $data[1];
                 $_SESSION["user"]["email"] = $data[2];
-                $return = array(true,$result,"dashboard");
+                $return = array(true,$result,"type-indicator");
             } else{
                 $return = array(false,"Las contraseñas no son iguales","");
             }
