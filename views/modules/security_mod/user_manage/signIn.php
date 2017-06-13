@@ -17,12 +17,10 @@
                             <div class="form-group">
                                 <label for="emailSignIn" class="form-label">Correo Electrónico</label>
                                 <input type="email" class="form-control form-input" id="emailSignIn" aria-describedby="emailHelp">
-                                <small id="emailHelp" class="form-text text-muted">El correo no existe en la aplicación.</small>
                             </div>
                             <div class="form-group">
                                 <label for="passSignIn" class="form-label">Contraseña</label>
                                 <input type="password" class="form-control form-input" id="passSignIn" aria-describedby="passHelp">
-                                <small id="passHelp" class="form-text text-muted">La contraseña es incorrecta.</small>
                             </div>
                             <div class="button-container">
                                 <button class="form-button" id="butonSignIn">ENTRAR</button>

@@ -16,7 +16,7 @@
                 $sql = "INSERT INTO user VALUES(?,?,?,?,?)";
                 $query = $this->pdo->prepare($sql);
                 $query->execute(array($data[5],$data[0],$data[1],$data[2],$data[3]));
-                $result = "Datos ingresados correctamente";
+                $result = "Registro exitoso";
             } catch (PDOException $e) {
                 die($e->getMessage()." ".$e->getLine()." ".$e->getFile());
             }

@@ -13,7 +13,7 @@
                         <h2 class="form-title">BIOMATIC</h2>
                     </div>
                     <div class="form-signIn">
-                        <form action="index.php?c=user&a=create" method="post" id="signUp">
+                        <form method="post" id="signUp">
                             <div class="row">
                                 <div class="col">
                                     <div class="form-group">
