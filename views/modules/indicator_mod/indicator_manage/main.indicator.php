@@ -4,8 +4,10 @@
                                     <thead>
                                         <tr class="main-fila">
                                             <th>Item</th>
+                                            <th>Tipo</th>
                                             <th>Nombre</th>
-                                            <th>Estado</th>
+                                            <th>Categoria</th>
+                                            <th>Responsable</th>
                                             <th width="120px">Acciones</th>
                                         </tr>
                                     </thead>
@@ -17,8 +19,10 @@
                                     ?>
                                         <tr>
                                             <td><?php echo $item; ?></td>
+                                            <td><?php echo $row["typeIn_name"]; ?></td>
                                             <td><?php echo $row["ind_nombre"]; ?></td>
                                             <td><?php echo $row["ind_categoria"]; ?></td>
+                                            <td><?php echo $row["ind_responsable"]; ?></td>
                                             <td>
                                                 <a href="" class="icon-table">
                                                     <i class="material-icons icon-green">remove_red_eye</i>

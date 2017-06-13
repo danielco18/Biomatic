@@ -6,3 +6,7 @@ RewriteRule ^sign-in$                   index.php?c=user&a=signIn
 RewriteRule ^dashboard$                 index.php?c=user&a=dashboard
 RewriteRule ^type-indicator$            index.php?c=typeIndicator
 RewriteRule ^indicator$                 index.php?c=indicator
+RewriteRule ^semillero$                 index.php?c=semillero
+RewriteRule ^publicacion$               index.php?c=publicacion
+RewriteRule ^ponencias$                 index.php?c=ponencias
+RewriteRule ^proyectos$                 index.php?c=proyectos

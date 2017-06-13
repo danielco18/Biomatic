@@ -25,7 +25,7 @@
 
         public function readInd(){
             try {
-                $sql = "SELECT * FROM indicator ORDER BY ind_nombre";
+                $sql = "SELECT * FROM indicator INNER JOIN type_indicator ON (ind_typeIn_code = typeIn_code ) ORDER BY ind_nombre";
                 $query = $this->pdo->prepare($sql);
                 $query->execute();
                 $result = $query->fetchALL(PDO::FETCH_BOTH);

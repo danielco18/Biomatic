@@ -5,7 +5,7 @@
                                         <tr class="main-fila">
                                             <th>Item</th>
                                             <th>Nombre</th>
-                                            <th>Estado</th>
+                                            <th>Descripción</th>
                                             <th width="120px">Acciones</th>
                                         </tr>
                                     </thead>
@@ -18,7 +18,7 @@
                                         <tr>
                                             <td><?php echo $item; ?></td>
                                             <td><?php echo $row["typeIn_name"]; ?></td>
-                                            <td><?php echo $row["typeIn_state"]; ?></td>
+                                            <td><?php echo $row["typeIn_desc"]; ?></td>
                                             <td>
                                                 <a href="" class="icon-table">
                                                     <i class="material-icons icon-green">remove_red_eye</i>
