@@ -16,7 +16,7 @@
                         <div class="form-signIn">
                             <div class="form-group">
                                 <label for="emailSignIn" class="form-label">Correo Electrónico</label>
-                                <input type="email" class="form-control form-input" id="emailSignIn" aria-describedby="emailHelp">
+                                <input type="email" class="email form-control form-input" id="emailSignIn" aria-describedby="emailHelp">
                             </div>
                             <div class="form-group">
                                 <label for="passSignIn" class="form-label">Contraseña</label>

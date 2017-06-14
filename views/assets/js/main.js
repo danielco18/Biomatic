@@ -26,7 +26,7 @@ $('#dataTable').DataTable({
 });
 
 $(".email").focus(function(){
-   $(this).siblings("span").remove();
+   $(".email").siblings("small").remove();
    $(".form-button").attr("disabled",false);
 })
 
