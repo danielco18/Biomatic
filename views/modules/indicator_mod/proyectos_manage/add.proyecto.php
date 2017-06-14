@@ -27,7 +27,7 @@
                         <div class="col">
                             <div class="form-group">
                                 <label for="" class="form-label">Alcance de Investigación</label>
-                                <input type="date" name="data[]" class="form-control form-input">
+                                <input type="text" name="data[]" class="form-control form-input">
                             </div>
                         </div>
                         <div class="col">
@@ -125,6 +125,23 @@
                             <div class="form-group">
                                 <label for="" class="form-label">Cobertura</label>
                                 <input type="text" name="data[]" class="form-control form-input">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <div class="form-group">
+                                    <label for="" class="form-label">Año</label>
+                                    <select class="form-control form-input form-select" name="data[6]">
+                                        <option disabled selected>Escoja una opción</option>
+                                        <option value="2012">2012</option>
+                                        <option value="2013">2013</option>
+                                        <option value="2014">2014</option>
+                                        <option value="2015">2015</option>
+                                        <option value="2016">2016</option>
+                                        <option value="2017">2017</option>
+                                        <option value="2018">2018</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -16,9 +16,10 @@
 
         public function create(){
             $data = $_POST["data"];
-            $data[20] = randAlphaNum('30');
+            $data[7] = randAlphaNum('30');
+            $data[8] = "uCfYTfncINM02uiot2hN5Fycu5u4Mw";
             $result = $this->PonenciasM->createPonencias($data);
-            echo $result;
+            header("Location: index.php?c=ponencias&msn=$result");
         }
 
         public function update(){
@@ -31,13 +32,13 @@
         public function updateData(){
             $data = $_POST["data"];
             $result = $this->PonenciasM->updatePonencias($data);
-            echo $result;
+            header("Location: index.php?c=ponencias&msn=$result");
         }
 
         public function delete(){
             $data = $_GET["token"];
             $result = $this->PonenciasM->deletePonencias($data);
-            echo $result;
+            header("Location: index.php?c=ponencias&msn=$result");
         }
     }
 ?>

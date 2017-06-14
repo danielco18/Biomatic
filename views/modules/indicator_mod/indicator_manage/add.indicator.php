@@ -1,12 +1,12 @@
                         <?php require_once 'views/include/dashboard.php'; ?>
                             <div class="text-dashboard">
-                                <h2 class="dashboard-texto">Gestionar Tipo Inidicador</h2>
+                                <h2 class="dashboard-texto">Gestionar Inidicador</h2>
                             </div>
                             <div class="row">
                                 <div class="col-lg-10 offset-lg-1">
                                     <form action="index.php?c=indicator&a=create" method="post" id="createIndicator">
                                         <div class="form-text-container">
-                                            <h4 class="form-title form-subtitle">CREAR TIPO INDICADOR</h4>
+                                            <h4 class="form-title form-subtitle">CREAR INDICADOR</h4>
                                         </div>
                                         <div class="form-signIn">
                                             <div class="row">
@@ -36,7 +36,7 @@
                                                 <div class="col">
                                                     <div class="form-group">
                                                         <label for="" class="form-label">Fecha Actualización</label>
-                                                        <input type="date" name="data[]" class="form-control form-input">
+                                                        <input type="text" name="data[]" class="form-control form-input">
                                                     </div>
                                                 </div>
                                                 <div class="col">

@@ -13,9 +13,9 @@
 
         public function createPublicacion($data){
             try {
-                $sql = "INSERT INTO publicacion VALUES (?,?,?,?,?,?,?,?)";
+                $sql = "INSERT INTO publicacion VALUES (?,?,?,?,?,?,?,?,?)";
                 $query = $this->pdo->prepare($sql);
-        $query->execute(array($data[0],$data[0],$data[0],$data[0],$data[0],$data[0],$data[0],$data[0]));
+                $query->execute(array($data[7],$data[0],$data[1],$data[2],$data[3],$data[4],$data[5],$data[6],$data[8]));
                 $result = "Datos ingresados correctamente";
             } catch (PDOException $e) {
                 die($e->getMessage()." ".$e->getLine()." ".$e->getFile());

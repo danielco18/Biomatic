@@ -22,10 +22,7 @@
                     <td><?php echo $row["np_tituloInvestigacion"]; ?></td>
                     <td><?php echo $row["np_institucion"]; ?></td>
                     <td>
-                        <a href="" class="icon-table">
-                            <i class="material-icons icon-green">remove_red_eye</i>
-                        </a>
-                        <a href="index.php?c=semillero&a=update&token=<?php echo $row['ind_code'];?>" class="icon-table">
+                        <a href="index.php?c=semillero&a=update&token=<?php echo $row['ind_code'];?>" class="icon-table" onclick="return confirm('Está seguro?');">
                             <i class="material-icons icon-yellow">create</i>
                         </a>
                         <a href="index.php?c=semillero&a=delete&token=<?php echo $row['ind_code'];?>" class="icon-table">

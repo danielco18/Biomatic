@@ -17,4 +17,12 @@
         $controller = new $controller;
         $controller->main();
     }
+
+	if (isset($_GET["msn"])) {
+		$space = "";
+		$success = "success";
+	?>
+        <script>swal("<?php echo $_GET['msn']; ?>","","success")</script>"
+	<?php
+    }
 ?>

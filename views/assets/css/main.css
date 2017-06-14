@@ -236,6 +236,8 @@ table{
 select{
     padding: 5px !important;
     width: 100% !important;
+    background: none !important;
+    border-bottom: 1px solid #565656 !important;
 }
 
 .text-muted{

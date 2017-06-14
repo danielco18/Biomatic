@@ -13,11 +13,11 @@
 
         public function createSemillero($data){
             try {
-                $sql = "INSERT INTO semillero_investigacion VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+                $sql = "INSERT INTO semillero_investigacion VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
                 $query = $this->pdo->prepare($sql);
                 $query->execute(array(
-                        $data[0],$data[0],$data[0],$data[0],$data[0],$data[0],$data[0],$data[0],
-                        $data[0],$data[0],$data[0],$data[0],$data[0],$data[0],$data[0]
+            $data[14],$data[0],$data[1],$data[2],$data[3],$data[4],$data[5],$data[6],
+            $data[7],$data[8],$data[9],$data[10],$data[1],$data[12],$data[13],$data[15]
                         ));
                 $result = "Datos ingresados correctamente";
             } catch (PDOException $e) {

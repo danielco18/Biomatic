@@ -20,14 +20,11 @@
                                             <td><?php echo $row["typeIn_name"]; ?></td>
                                             <td><?php echo $row["typeIn_desc"]; ?></td>
                                             <td>
-                                                <a href="" class="icon-table">
-                                                    <i class="material-icons icon-green">remove_red_eye</i>
-                                                </a>
                                                 <a href="index.php?c=typeIndicator&a=update&token=<?php echo $row['typeIn_code'];?>" class="icon-table">
                                                     <i class="material-icons icon-yellow">create</i>
                                                 </a>
                                                 <a href="index.php?c=typeIndicator&a=delete&token=<?php echo $row['typeIn_code'];?>" class="icon-table">
-                                                    <i class="material-icons icon-red">delete</i>
+                                                    <i class="material-icons icon-red" onclick="return confirm('Está seguro?');">delete</i>
                                                 </a>
                                             </td>
                                         </tr>

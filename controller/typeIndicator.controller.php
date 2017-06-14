@@ -1,4 +1,4 @@
-<?php  
+<?php
     require_once 'model/typeIndicator.model.php';
 
     class TypeindicatorController{
@@ -18,7 +18,7 @@
             $data = $_POST["data"];
             $data[3] = randAlphaNum('30');
             $result = $this->TypeIndM->createTypeInd($data);
-            echo $result;
+            header("Location: index.php?c=typeIndicator&msn=$result");
         }
 
         public function update(){
@@ -37,7 +37,7 @@
         public function delete(){
             $data = $_GET["token"];
             $result = $this->TypeIndM->deleteTypeInd($data);
-            echo $result;
+            header("Location: index.php?c=typeIndicator&msn=$result");
         }
     }
 ?>

@@ -15,7 +15,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="descTypeIndicator" class="form-label">Descripción</label>
-                                            <input type="text" name="data[]" class="form-control form-input" id="descTypeIndicator" required>
+                                            <input type="text" name="data[]" class="form-control form-input" id="descTypeIndicator">
                                         </div>
                                         <div class="button-container">
                                             <button class="form-button" id="butonCreateType">CREAR</button>

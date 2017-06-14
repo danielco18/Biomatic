@@ -16,9 +16,10 @@
 
         public function create(){
             $data = $_POST["data"];
-            $data[20] = randAlphaNum('30');
+            $data[14] = randAlphaNum('30');
+            $data[15] = "UmxH9zRO5FmB256hROHySkeFXAjkq4";
             $result = $this->SemilleroM->createSemillero($data);
-            echo $result;
+            header("Location: index.php?c=semillero&msn=$result");
         }
 
         public function update(){
@@ -31,13 +32,13 @@
         public function updateData(){
             $data = $_POST["data"];
             $result = $this->SemilleroM->updateSemillero($data);
-            echo $result;
+            header("Location: index.php?c=semillero&msn=$result");
         }
 
         public function delete(){
             $data = $_GET["token"];
             $result = $this->SemilleroM->deleteSemillero($data);
-            echo $result;
+            header("Location: index.php?c=semillero&msn=$result");
         }
     }
 ?>

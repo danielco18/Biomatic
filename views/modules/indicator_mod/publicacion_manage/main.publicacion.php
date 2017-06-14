@@ -22,10 +22,10 @@
                                         <td><?php echo $row["pub_categoria"]; ?></td>
                                         <td><?php echo $row["pub_nombrePublicacion"]; ?></td>
                                             <td>
-                                                <a href="index.php?c=typeIndicator&a=update&token=<?php echo $row['pon_code'];?>" class="icon-table">
+                                                <a href="index.php?c=publicacion&a=update&token=<?php echo $row['pub_code'];?>" class="icon-table">
                                                     <i class="material-icons icon-yellow">create</i>
                                                 </a>
-                                                <a href="index.php?c=typeIndicator&a=delete&token=<?php echo $row['pon_code'];?>" class="icon-table">
+                                                <a href="index.php?c=publicacion&a=delete&token=<?php echo $row['pub_code'];?>" class="icon-table" onclick="return confirm('Está seguro?');">
                                                     <i class="material-icons icon-red">delete</i>
                                                 </a>
                                             </td>

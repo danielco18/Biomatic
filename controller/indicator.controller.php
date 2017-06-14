@@ -18,7 +18,7 @@
             $data = $_POST["data"];
             $data[20] = randAlphaNum('30');
             $result = $this->IndicatorM->createInd($data);
-            echo $result;
+            header("Location: index.php?c=indicator&msn=$result");
         }
 
         public function update(){
@@ -37,7 +37,7 @@
         public function delete(){
             $data = $_GET["token"];
             $result = $this->IndicatorM->deleteInd($data);
-            echo $result;
+            header("Location: index.php?c=indicator&msn=$result");
         }
     }
 ?>
