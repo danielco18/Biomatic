@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 14, 2017 at 07:26 PM
+-- Generation Time: Jun 14, 2017 at 11:23 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -77,7 +77,7 @@ CREATE TABLE `n_proyectos` (
   `np_resultadosEsperados` longtext COLLATE utf8_spanish_ci,
   `np_resultadosObtenidos` longtext COLLATE utf8_spanish_ci,
   `np_cobertura` longtext COLLATE utf8_spanish_ci,
-  `date` varchar(4) COLLATE utf8_spanish_ci NOT NULL,
+  `dates` varchar(4) COLLATE utf8_spanish_ci NOT NULL,
   `np_fechaInicio` varchar(30) COLLATE utf8_spanish_ci DEFAULT NULL,
   `np_fechaFin` varchar(30) COLLATE utf8_spanish_ci DEFAULT NULL,
   `np_typeInd` varchar(30) COLLATE utf8_spanish_ci NOT NULL
@@ -98,7 +98,7 @@ CREATE TABLE `ponencias` (
   `pon_tipoPonencia` varchar(30) COLLATE utf8_spanish_ci DEFAULT NULL,
   `pon_autores` longtext COLLATE utf8_spanish_ci,
   `pon_programasFormacion` longtext COLLATE utf8_spanish_ci,
-  `date` varchar(4) COLLATE utf8_spanish_ci NOT NULL,
+  `dates` varchar(4) COLLATE utf8_spanish_ci NOT NULL,
   `pon_typeInd` varchar(30) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
@@ -117,7 +117,7 @@ CREATE TABLE `publicacion` (
   `pub_nombrePublicacion` longtext COLLATE utf8_spanish_ci,
   `pub_autores` longtext COLLATE utf8_spanish_ci,
   `pub_programasFormacion` longtext COLLATE utf8_spanish_ci,
-  `date` varchar(4) COLLATE utf8_spanish_ci NOT NULL,
+  `dates` varchar(4) COLLATE utf8_spanish_ci NOT NULL,
   `pub_typeInd` varchar(30) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
@@ -143,7 +143,7 @@ CREATE TABLE `semillero_investigacion` (
   `semI_proyectos` longtext COLLATE utf8_spanish_ci,
   `semI_horasSemanales` varchar(10) COLLATE utf8_spanish_ci DEFAULT NULL,
   `semI_productos` longtext COLLATE utf8_spanish_ci,
-  `date` varchar(4) COLLATE utf8_spanish_ci NOT NULL,
+  `dates` varchar(4) COLLATE utf8_spanish_ci NOT NULL,
   `seml_typeInd` varchar(30) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
@@ -191,7 +191,6 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`user_code`, `user_name`, `user_lastName`, `user_email`, `user_password`) VALUES
-('IZTJeb7OvLIH8s1SctSijxDqyR8fwa', 'asd', 'asd', 'a@a.a', '$2y$10$YYa3MnHwZV8vo9B3Fxsc/u6KIOA7uMV5tq2dbiXfOxr83ljeSJ44S'),
 ('OVFtles9xQVfmoP7gVmCe4f3JUJjJ2', 'Daniel', 'Cardona', 'daniel.eco18@gmail.com', '$2y$10$dkLpWsIzOUUIzFvQNoNshOl3DfRqLgg7U58snZXAJhiMk.ketm6VO');
 
 --
