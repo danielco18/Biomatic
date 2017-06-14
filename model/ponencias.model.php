@@ -49,9 +49,9 @@
 
         public function updatePonencias($data){
             try {
-                $sql = "UPDATE ponencias SET pon_claseEvento = ?, pon_nombrePonencia = ?, pon_nombreEvento = ?, pon_tipoPonencia = ?, pon_autores = ?, pon_programasFormacion = ? WHERE pon_code = ?";
+                $sql = "UPDATE ponencias SET pon_claseEvento = ?, pon_nombrePonencia = ?, pon_nombreEvento = ?, pon_tipoPonencia = ?, pon_autores = ?, pon_programasFormacion = ?, dates = ? WHERE pon_code = ?";
                 $query = $this->pdo->prepare($sql);
-        $query->execute(array($data[0],$data[0],$data[0],$data[0],$data[0],$data[0],$data[0],$data[0]));
+$query->execute(array($data[0],$data[1],$data[2],$data[3],$data[4],$data[5],$data[6],$data[7]));
                 $result = "Datos actualizados correctamente";
             } catch (PDOException $e) {
                 die($e->getMessage()." ".$e->getLine()." ".$e->getFile());

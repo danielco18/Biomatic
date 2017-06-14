@@ -53,7 +53,7 @@
 
         public function updateProyectos($data){
             try {
-                $sql = "UPDATE np_proyectos SET
+                $sql = "UPDATE n_proyectos SET
                         np_tipoInvestigacion = ?,
                         np_tituloInvestigacion = ?,
                         np_alcanceInvestigacion = ?,
@@ -69,14 +69,15 @@
                         np_resultadosEsperados = ?,
                         np_resultadosObtenidos = ?,
                         np_cobertura = ?,
+                        dates = ?,
                         np_fechaInicio = ?,
                         np_fechaFin = ?
                         WHERE np_code = ?";
                 $query = $this->pdo->prepare($sql);
                 $query->execute(array(
-                $data[0],$data[0],$data[0],$data[0],$data[0],$data[0],$data[0],$data[0],
-                $data[0],$data[0],$data[0],$data[0],$data[0],$data[0],$data[0],$data[0],
-                $data[0],$data[0]));
+                $data[0],$data[1],$data[2],$data[3],$data[4],$data[5],$data[6],$data[7],
+                $data[8],$data[9],$data[10],$data[11],$data[12],$data[13],$data[14],$data[15],
+                $data[16],$data[17],$data[18]));
                 $result = "Datos actualizados correctamente";
             } catch (PDOException $e) {
                 die($e->getMessage()." ".$e->getLine()." ".$e->getFile());

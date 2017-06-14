@@ -28,7 +28,7 @@
 
         public function readSemillero(){
             try {
-                $sql = "SELECT * FROM semillero_investigacion ORDER BY semI_code";
+                $sql = "SELECT * FROM semillero_investigacion";
                 $query = $this->pdo->prepare($sql);
                 $query->execute();
                 $result = $query->fetchALL(PDO::FETCH_BOTH);
@@ -52,7 +52,7 @@
 
         public function updateSemillero($data){
             try {
-                $sql = "UPDATE np_proyectos SET
+                $sql = "UPDATE semillero_investigacion SET
                         semI_nombre = ?,
                         semI_documento = ?,
                         seml_fechaNac = ?,
@@ -64,12 +64,14 @@
                         semI_fechaIni = ?,
                         semI_fechaFin = ?,
                         semI_proyectos = ?,
-                        semI_productos = ?
+                        semI_horasSemanales = ?,
+                        semI_productos = ?,
+                        dates = ?
                         WHERE semI_code = ?";
                 $query = $this->pdo->prepare($sql);
                 $query->execute(array(
-                            $data[0],$data[0],$data[0],$data[0],$data[0],$data[0],$data[0],$data[0],
-                            $data[0],$data[0],$data[0],$data[0],$data[0]));
+                            $data[0],$data[1],$data[2],$data[3],$data[4],$data[5],$data[6],$data[7],
+                            $data[8],$data[9],$data[10],$data[11],$data[12],$data[13],$data[14]));
                 $result = "Datos actualizados correctamente";
             } catch (PDOException $e) {
                 die($e->getMessage()." ".$e->getLine()." ".$e->getFile());

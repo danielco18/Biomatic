@@ -3,7 +3,7 @@
                             <h2 class="dashboard-texto">Gestionar Ponencias</h2>
                         </div>
                         <div class="row">
-                            <div class="col-lg-6 offset-lg-3">
+                            <div class="col-lg-8 offset-lg-2">
                                 <form action="index.php?c=ponencias&a=create" method="post" id="createTypeInd">
                                     <div class="form-text-container">
                                         <h4 class="form-title form-subtitle">CREAR PONENCIA</h4>

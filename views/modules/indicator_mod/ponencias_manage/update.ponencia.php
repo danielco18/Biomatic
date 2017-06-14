@@ -1,183 +1,61 @@
 <?php
     require_once 'views/include/dashboard.php';
-    $Ponencia = $this->PonenciasM->updatePonencias($data);
+    $Ponencia = $this->PonenciasM->readPonenciasByCode($data);
 ?>
 <div class="text-dashboard">
     <h2 class="dashboard-texto">Gestionar Ponencias</h2>
 </div>
 <div class="row">
-    <div class="col-lg-10 offset-lg-1">
-        <form action="index.php?c=indicator&a=updateData" method="post" style="margin-bottom: 30px;">
+    <div class="col-lg-8 offset-lg-2">
+        <form action="index.php?c=ponencias&a=updateData" method="post" style="margin-bottom: 30px;">
             <div class="form-text-container">
                 <h4 class="form-title form-subtitle">MODIFICAR PONENCIA</h4>
             </div>
             <div class="form-signIn">
-                <div class="row">
-                    <div class="col">
-                        <div class="form-group">
-                            <label for="" class="form-label">Tipo Indicador</label>
-                            <select class="form-control form-input" name="data[]">
-                                <?php
-                                foreach ($this->IndicatorM->readTypeInd() as $row){
-                                    ?>
-                                    <option value="<?php echo $row['typeIn_code']; ?>"><?php echo $row["typeIn_name"]; ?></option>
-                                    <?php
-                                }
-                                ?>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="form-group">
-                            <label for="" class="form-label">Nombre</label>
-                            <input type="text" name="data[]" value="<?php echo $Indicator['ind_nombre'];?>" class="form-control form-input">
-                        </div>
-                    </div>
+                <div class="form-group">
+                    <label for="" class="form-label">Clase evento</label>
+                    <input type="text" name="data[0]" class="form-control form-input" value="<?php echo $Ponencia["pon_claseEvento"];?>">
                 </div>
-                <div class="row">
-                    <div class="col">
-                        <div class="form-group">
-                            <label for="" class="form-label">Fecha Actualización</label>
-                            <input type="text" name="data[]" value="<?php echo $Indicator['ind_fechaActualizacion'];?>" class="form-control form-input">
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="form-group">
-                            <label for="" class="form-label">Categoria</label>
-                            <input type="text" name="data[]" value="<?php echo $Indicator['ind_categoria'];?>" class="form-control form-input">
-                        </div>
-                    </div>
+                <div class="form-group">
+                    <label for="" class="form-label">Nombre Ponencia</label>
+                    <input type="text" name="data[1]" class="form-control form-input" value="<?php echo $Ponencia["pon_nombrePonencia"];?>">
                 </div>
-                <div class="row">
-                    <div class="col">
-                        <div class="form-group">
-                            <label for="" class="form-label">Subcategoria</label>
-                            <input type="text" name="data[]" value="<?php echo $Indicator['ind_subCategoria'];?>" class="form-control form-input">
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="form-group">
-                            <label for="" class="form-label">Definicion</label>
-                            <input type="text" name="data[]" value="<?php echo $Indicator['ind_definicion'];?>" class="form-control form-input">
-                        </div>
-                    </div>
+                <div class="form-group">
+                    <label for="" class="form-label">Nombre Evento</label>
+                    <input type="text" name="data[2]" class="form-control form-input" value="<?php echo $Ponencia["pon_nombreEvento"];?>">
                 </div>
-                <div class="row">
-                    <div class="col">
-                        <div class="form-group">
-                            <label for="" class="form-label">Objetivo</label>
-                            <input type="text" name="data[]" value="<?php echo $Indicator['ind_objetivo'];?>" class="form-control form-input">
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="form-group">
-                            <label for="" class="form-label">Metodo medición</label>
-                            <input type="text" name="data[]" value="<?php echo $Indicator['ind_metodoMedicion'];?>" class="form-control form-input">
-                        </div>
-                    </div>
+                <div class="form-group">
+                    <label for="" class="form-label">Tipo Ponencia</label>
+                    <input type="text" name="data[3]" class="form-control form-input" value="<?php echo $Ponencia["pon_tipoPonencia"];?>">
                 </div>
-                <div class="row">
-                    <div class="col">
-                        <div class="form-group">
-                            <label for="" class="form-label">Unidad de medidad</label>
-                            <input type="text" name="data[]" value="<?php echo $Indicator['ind_unidadMedida'];?>" class="form-control form-input">
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="form-group">
-                            <label for="" class="form-label">Formula de medida</label>
-                            <input type="text" name="data[]" value="<?php echo $Indicator['ind_formulaMedida'];?>" class="form-control form-input">
-                        </div>
-                    </div>
+                <div class="form-group">
+                    <label for="" class="form-label">Autores</label>
+                    <input type="text" name="data[4]" class="form-control form-input" value="<?php echo $Ponencia["pon_autores"];?>">
                 </div>
-                <div class="row">
-                    <div class="col">
-                        <div class="form-group">
-                            <label for="" class="form-label">Variable1</label>
-                            <input type="text" name="data[]" value="<?php echo $Indicator['ind_variable1'];?>" class="form-control form-input">
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="form-group">
-                            <label for="" class="Concepto estadistico"></label>
-                            <input type="text" name="data[]" value="<?php echo $Indicator['ind_conceptoEstadistico'];?>" class="form-control form-input">
-                        </div>
-                    </div>
+                <div class="form-group">
+                    <label for="" class="form-label">Programa formación</label>
+                    <input type="text" name="data[5]" class="form-control form-input" value="<?php echo $Ponencia["pon_programasFormacion"];?>">
                 </div>
-                <div class="row">
-                    <div class="col">
-                        <div class="form-group">
-                            <label for="" class="form-label">Frecuenta calculo variable</label>
-                            <input type="text" name="data[]" value="<?php echo $Indicator['ind_frecuenciaCalculoVariable'];?>" class="form-control form-input">
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="form-group">
-                            <label for="" class="form-label">Fuenta imformación</label>
-                            <input type="text" name="data[]" value="<?php echo $Indicator['ind_fuenteInformacion'];?>" class="form-control form-input">
-                        </div>
-                    </div>
+                <div class="form-group">
+                    <label for="" class="form-label">Año</label>
+                    <select class="form-control form-input form-select" name="data[6]">
+                        <option selected value="<?php echo $Ponencia["dates"];?>">Elige una opción</option>
+                        <option value="2012">2012</option>
+                        <option value="2013">2013</option>
+                        <option value="2014">2014</option>
+                        <option value="2015">2015</option>
+                        <option value="2016">2016</option>
+                        <option value="2017">2017</option>
+                        <option value="2018">2018</option>
+                    </select>
                 </div>
-                <div class="row">
-                    <div class="col">
-                        <div class="form-group">
-                            <label for="" class="form-label">Serie disponible</label>
-                            <input type="text" name="data[]" value="<?php echo $Indicator['ind_serieDisponible'];?>" class="form-control form-input">
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="form-group">
-                            <label for="" class="form-label">Desagracion tematica</label>
-                            <input type="text" name="data[]" value="<?php echo $Indicator['ind_desagracionTematica'];?>" class="form-control form-input">
-                        </div>
-                    </div>
+                <input type="hidden" name="data[7]" value="<?php echo $Ponencia["pon_code"];?>">
+                <div class="button-container">
+                    <button class="form-button">MODIFICAR</button>
                 </div>
-                <div class="row">
-                    <div class="col">
-                        <div class="form-group">
-                            <label for="" class="form-label">Desagracion geografica</label>
-                            <input type="text" name="data[]" value="<?php echo $Indicator['ind_desagracionGeografica'];?>" class="form-control form-input">
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="form-group">
-                            <label for="" class="form-label">Limitaciones</label>
-                            <input type="text" name="data[]" value="<?php echo $Indicator['ind_limitaciones'];?>" class="form-control form-input">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <div class="form-group">
-                            <label for="" class="form-label">Responsable</label>
-                            <input type="text" name="data[]" value="<?php echo $Indicator['ind_responsable'];?>"  class="form-control form-input">
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="form-group">
-                            <label for="" class="form-label">Observaciones</label>
-                            <input type="text" name="data[]" value="<?php echo $Indicator['ind_observaciones'];?>" class="form-control form-input">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <div class="form-group">
-
-                            <input type="hidden" name="data[]" value="<?php echo $Indicator['ind_code'];?>">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <div class="button-container">
-                            <button class="form-button" id="">MODIFICAR</button>
-                        </div>
-                    </div>
-                </div>
+            </div>
         </form>
-    </form>
-</div>
+    </div>
 </div>
 </div>
 </div>
