@@ -36,7 +36,6 @@
                                         <div class="form-group">
                                             <label for="" class="form-label">Año</label>
                                             <select class="form-control form-input form-select" name="data[6]">
-                                                <option disabled selected>Escoja una opción</option>
                                                 <option value="2012">2012</option>
                                                 <option value="2013">2013</option>
                                                 <option value="2014">2014</option>

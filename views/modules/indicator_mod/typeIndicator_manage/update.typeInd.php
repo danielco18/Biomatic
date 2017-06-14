@@ -1,4 +1,4 @@
-                    <?php 
+                    <?php
                         require_once 'views/include/dashboard.php';
                         $typeInd = $this->TypeIndM->readTypeIndByCode($data);
                     ?>
@@ -18,7 +18,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="descTypeIndicator" class="form-label">Descripción</label>
-                                            <textarea name="data[]" value="<?php echo $typeInd['typeIn_desc']; ?>" class="form-control form-input" id="descTypeIndicator"></textarea>
+                                            <input type="text" name="data[]" value="<?php echo $typeInd['typeIn_desc']; ?>" class="form-control form-input" id="descTypeIndicator">
                                         </div>
                                         <div class="form-group">
                                             <label for="stateTypeIndicator" class="form-label">Estado</label>

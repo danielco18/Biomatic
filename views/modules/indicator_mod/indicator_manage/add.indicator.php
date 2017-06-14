@@ -14,7 +14,6 @@
                                                     <div class="form-group">
                                                         <label for="" class="form-label">Tipo indicador</label>
                                                         <select class="" name="data[]" class="form-control form-input form-select">
-                                                            <option disabled selected>Escoja una opción</option>
                                                             <?php
                                                                 foreach ($this->IndicatorM->readTypeInd() as $row){
                                                             ?>
@@ -28,7 +27,7 @@
                                                 <div class="col">
                                                     <div class="form-group">
                                                         <label for="" class="form-label">Nombre</label>
-                                                        <input type="text" name="data[]" class="form-control form-input" required="">
+                                                        <input type="text" name="data[]" class="form-control form-input" ="">
                                                     </div>
                                                 </div>
                                             </div>

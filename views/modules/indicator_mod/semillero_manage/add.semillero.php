@@ -13,13 +13,13 @@
                         <div class="col">
                             <div class="form-group">
                                 <label for="" class="form-label">Nombre</label>
-                                <input type="text" name="data[0]" class="form-control form-input" required="">
+                                <input type="text" name="data[0]" class="form-control form-input">
                             </div>
                         </div>
                         <div class="col">
                             <div class="form-group">
                                 <label for="" class="form-label">Documento</label>
-                                <input type="text" name="data[1]" class="form-control form-input" required="">
+                                <input type="text" name="data[1]" class="form-control form-input">
                             </div>
                         </div>
                     </div>
@@ -62,7 +62,6 @@
                             <div class="form-group">
                                 <label for="" class="form-label">Categoria</label>
                                 <select name="data[7]" class="form-control form-input">
-                                    <option disabled selected>Escoje una opción</option>
                                     <option value="ADSI">ADSI</option>
                                     <option value="Sistemas integrados de gestión de calidad">Sistemas integrados de gestión de calidad</option>
                                     <option value="Formulación de proyectos">Formulación de proyectos</option>
@@ -118,7 +117,6 @@
                                 <div class="form-group">
                                     <label for="" class="form-label">Año</label>
                                     <select class="form-control form-input form-select" name="data[13]">
-                                        <option disabled selected>Escoja una opción</option>
                                         <option value="2012">2012</option>
                                         <option value="2013">2013</option>
                                         <option value="2014">2014</option>

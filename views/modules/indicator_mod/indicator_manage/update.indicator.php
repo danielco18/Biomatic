@@ -17,7 +17,6 @@
                                                     <div class="form-group">
                                                         <label for="" class="form-label">Tipo Indicador</label>
                                                         <select class="form-control form-input" name="data[]">
-                                                            <option value="" disabled selected>Escoja una opción</option>
                                                             <?php
                                                             foreach ($this->IndicatorM->readTypeInd() as $row){
                                                                 ?>
@@ -39,7 +38,7 @@
                                                 <div class="col">
                                                     <div class="form-group">
                                                         <label for="" class="form-label">Fecha Actualización</label>
-                                                        <input type="date" name="data[]" value="<?php echo $Indicator['ind_fechaActualizacion'];?>" class="form-control form-input">
+                                                        <input type="text" name="data[]" value="<?php echo $Indicator['ind_fechaActualizacion'];?>" class="form-control form-input">
                                                     </div>
                                                 </div>
                                                 <div class="col">
