@@ -17,6 +17,7 @@
                                                     <div class="form-group">
                                                         <label for="" class="form-label">Tipo Indicador</label>
                                                         <select class="form-control form-input" name="data[]">
+                                                            <option selected value="<?php echo $Indicator['ind_typeIn_code'];?>">Elige una opción</option>
                                                             <?php
                                                             foreach ($this->IndicatorM->readTypeInd() as $row){
                                                                 ?>
