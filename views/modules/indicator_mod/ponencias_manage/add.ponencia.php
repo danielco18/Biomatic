@@ -1,6 +1,12 @@
                     <?php require_once 'views/include/dashboard.php'; ?>
                         <div class="text-dashboard">
                             <h2 class="dashboard-texto">Gestionar Ponencias</h2>
+                            <div class="chart-link">
+                                <a href="chart-ponencia">
+                                    <i class="material-icons">equalizer</i>
+                                    <span>Ver gráficas</span>
+                                </a>
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col-lg-8 offset-lg-2">

@@ -14,6 +14,11 @@
             require_once 'views/include/footer.php';
         }
 
+        public function charts(){
+            require_once 'views/include/header.php';
+            require_once 'views/modules/indicator_mod/semillero_manage/charts.semillero.php';
+        }
+
         public function create(){
             $data = $_POST["data"];
             $data[14] = randAlphaNum('30');

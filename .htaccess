@@ -7,6 +7,10 @@ RewriteRule ^dashboard$                 index.php?c=user&a=dashboard
 RewriteRule ^type-indicator$            index.php?c=typeIndicator
 RewriteRule ^indicator$                 index.php?c=indicator
 RewriteRule ^semillero$                 index.php?c=semillero
+RewriteRule ^chart-semillero$           index.php?c=semillero&a=charts
 RewriteRule ^publicacion$               index.php?c=publicacion
+RewriteRule ^chart-publicacion$         index.php?c=publicacion&a=charts
 RewriteRule ^ponencias$                 index.php?c=ponencias
+RewriteRule ^chart-ponencia$            index.php?c=ponencias&a=charts
 RewriteRule ^proyectos$                 index.php?c=proyectos
+RewriteRule ^chart-proyectos$           index.php?c=proyectos&a=charts

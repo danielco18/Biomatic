@@ -14,6 +14,12 @@
             require_once 'views/include/footer.php';
         }
 
+        public function charts(){
+            require_once 'views/include/header.php';
+            require_once 'views/modules/indicator_mod/publicacion_manage/charts.publicacion.php';
+            require_once 'views/include/footer.php';
+        }
+
         public function create(){
             $data = $_POST["data"];
             $data[7] = randAlphaNum('30');
