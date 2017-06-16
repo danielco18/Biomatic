@@ -137,13 +137,14 @@
     };
     // Tipo ponencia
     var dataVinculados = {
-        labels: ["Semillero BIOMATIC", "Producción de Calzado"],
+        labels: ["Ténico", "Tecnólogo", "Especialización tecnológica"],
         datasets: [{
             label: 'Aprendices del semillero',
-            backgroundColor: 'steelblue',
+            backgroundColor: '#248275',
             data: [
-                34,
-                13
+                13,
+                25,
+                8
             ]
         }]
 
@@ -156,7 +157,7 @@
         options: {
             title:{
                 display:true,
-                text:"Aprendices vincualados al semillero por Año"
+                text:"Aprendices vinculados dependiendo del nivel de formación"
             },
             tooltips: {
                 mode: 'index',

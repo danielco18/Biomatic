@@ -15,7 +15,7 @@ var dataParticipacion = {
         ]
     }, {
         label: 'Internacionales',
-        backgroundColor: 'steelblue',
+        backgroundColor: '#248275',
         data: [
             6,
             5,
@@ -33,7 +33,7 @@ var dataTipoPonencia = {
     labels: ["Ponencia Oral", "Ponencia Póster"],
     datasets: [{
         label: 'Tipo de Ponencia',
-        backgroundColor: 'steelblue',
+        backgroundColor: '#248275',
         data: [
             12,
             6
@@ -46,7 +46,7 @@ var dataOtra = {
     labels: ["Ponencia Oral", "Ponencia Póster"],
     datasets: [{
         label: 'Tipo de Ponencia',
-        backgroundColor: 'steelblue',
+        backgroundColor: '#248275',
         data: [
             12,
             6

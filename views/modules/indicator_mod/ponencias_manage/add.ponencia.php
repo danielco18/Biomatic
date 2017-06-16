@@ -17,7 +17,11 @@
                                     <div class="form-signIn">
                                         <div class="form-group">
                                             <label for="" class="form-label">Clase evento</label>
-                                            <input type="text" name="data[0]" class="form-control form-input" id="">
+                                            <select class="form-control form-input form-select" name="data[0]">
+                                                <option value="Regional">Regional</option>
+                                                <option value="Nacional">Nacional</option>
+                                                <option value="Internacional">Internacional</option>
+                                            </select>
                                         </div>
                                         <div class="form-group">
                                             <label for="" class="form-label">Nombre Ponencia</label>
@@ -29,7 +33,10 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="" class="form-label">Tipo Ponencia</label>
-                                            <input type="text" name="data[3]" class="form-control form-input" id="">
+                                            <select class="form-control form-input form-select" name="data[3]">
+                                                <option value="Oral">Oral</option>
+                                                <option value="Póster">Póster</option>
+                                            </select>
                                         </div>
                                         <div class="form-group">
                                             <label for="" class="form-label">Autores</label>

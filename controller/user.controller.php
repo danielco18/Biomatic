@@ -79,12 +79,6 @@
             echo json_encode($return);
         }
 
-        public function dashboard(){
-            require_once 'views/include/header.php';
-            require_once 'views/modules/security_mod/user_manage/main-dashboard.php';
-            require_once 'views/include/footer.php';
-        }
-
         public function close(){
             session_destroy();
             header("Location: home");

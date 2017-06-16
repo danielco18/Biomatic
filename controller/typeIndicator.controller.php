@@ -9,6 +9,9 @@
         }
 
         public function main(){
+            if (!isset($_SESSION["user"]["name"])) {
+                header("Location: home");
+            }
             require_once 'views/include/header.php';
             require_once 'views/modules/indicator_mod/typeIndicator_manage/add.typeInd.php';
             require_once 'views/include/footer.php';

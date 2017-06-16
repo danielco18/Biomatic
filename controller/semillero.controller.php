@@ -21,8 +21,8 @@
 
         public function create(){
             $data = $_POST["data"];
-            $data[14] = randAlphaNum('30');
-            $data[15] = "UmxH9zRO5FmB256hROHySkeFXAjkq4";
+            $data[15] = randAlphaNum('30');
+            $data[16] = "UmxH9zRO5FmB256hROHySkeFXAjkq4";
             $result = $this->SemilleroM->createSemillero($data);
             header("Location: index.php?c=semillero&msn=$result");
         }

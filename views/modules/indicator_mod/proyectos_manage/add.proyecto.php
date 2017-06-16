@@ -83,6 +83,10 @@
                                 <label for="" class="form-label">Programa de formación</label>
                                 <select name="data[9]" class="form-control form-input">
                                     <option value="ADSI">ADSI</option>
+                                    <option value="Sistemas de gestión ambiental">Sistemas de gestión ambiental</option>
+                                    <option value="Diseño de componentes para calzado">Diseño de componentes para calzado</option>
+                                    <option value="Inyección de plastico">Inyección de plastico</option>
+                                    <option value="Extrusión de plastico">Extrusión de plastico</option>
                                     <option value="Sistemas integrados de gestión de calidad">Sistemas integrados de gestión de calidad</option>
                                     <option value="Formulación de proyectos">Formulación de proyectos</option>
                                     <option value="Contabilidad">Contabilidad</option>
@@ -92,6 +96,12 @@
                                     <option value="Producción de calzado y marroquinería">Producción de calzado y marroquinería</option>
                                     <option value="Diseño de calzado y marroquinería">Diseño de calzado y marroquinería</option>
                                     <option value="Diseño de productos industriales">Diseño de productos industriales</option>
+                                    <option value="Producción y consumo sostenible">Producción y consumo sostenible</option>
+                                    <option value="Decoración y adecuación de especies comerciales">Decoración y adecuación de especies comerciales</option>
+                                    <option value="Gestión y seguridad de bases de datos">Gestión y seguridad de bases de datos</option>
+                                    <option value="Diagnóstico y análisis organizacional">Diagnóstico y análisis organizacional</option>
+                                    <option value="Mercadeo estrátegico para el sistema de moda">Mercadeo estrátegico para el sistema de moda</option>
+                                    <option value="Diseño y desarrollo de investigaciones de mercado">Diseño y desarrollo de investigaciones de mercado</option>
                                     <option value="Otro">Otro</option>
                                 </select>
                             </div>
