@@ -2,7 +2,7 @@
         labels: ["2012", "2013", "2014", "2015", "2016", "2017", "2018"],
         datasets: [{
             label: 'Producción de calzado',
-            backgroundColor: '#e53935 ',
+            backgroundColor: '#0d47a1',
             data: [
                 6,
                 5,
@@ -14,7 +14,7 @@
             ]
         }, {
             label: 'Diseño de calzado',
-            backgroundColor: '#d81b60',
+            backgroundColor: '#1565c0',
             data: [
                 6,
                 5,
@@ -26,7 +26,7 @@
             ]
         }, {
             label: 'Sistemas integrados',
-            backgroundColor: '#8e24aa',
+            backgroundColor: '#1976d2',
             data: [
                 6,
                 5,
@@ -38,18 +38,6 @@
             ]
         }, {
             label: 'ADSI',
-            backgroundColor: '#3949ab',
-            data: [
-                6,
-                5,
-                3,
-                7,
-                10,
-                3,
-                1
-            ]
-        }, {
-            label: 'Contabilidad',
             backgroundColor: '#1e88e5',
             data: [
                 6,
@@ -61,8 +49,20 @@
                 1
             ]
         }, {
+            label: 'Contabilidad',
+            backgroundColor: '#2196f3',
+            data: [
+                6,
+                5,
+                3,
+                7,
+                10,
+                3,
+                1
+            ]
+        }, {
             label: 'Formulación de proyectos',
-            backgroundColor: '#00897b',
+            backgroundColor: '#42a5f5',
             data: [
                 6,
                 5,
@@ -74,7 +74,7 @@
             ]
         }, {
             label: 'Recursos Humanos',
-            backgroundColor: '#43a047',
+            backgroundColor: '#64b5f6',
             data: [
                 6,
                 5,
@@ -86,7 +86,7 @@
             ]
         }, {
             label: 'Logística',
-            backgroundColor: '#cddc39',
+            backgroundColor: '#90caf9',
             data: [
                 6,
                 5,
@@ -98,7 +98,7 @@
             ]
         }, {
             label: 'Salud Ocupacional',
-            backgroundColor: '#ffb300',
+            backgroundColor: '#bbdefb',
             data: [
                 6,
                 5,
@@ -110,7 +110,7 @@
             ]
         }, {
             label: 'Diseño de productos',
-            backgroundColor: '#f4511e',
+            backgroundColor: '#e3f2fd',
             data: [
                 6,
                 5,
@@ -122,7 +122,7 @@
             ]
         }, {
             label: 'Otro',
-            backgroundColor: '#00acc1',
+            backgroundColor: '#eeeeee',
             data: [
                 6,
                 5,
@@ -139,7 +139,7 @@
     var dataVinculados = {
         labels: ["Semillero BIOMATIC", "Producción de Calzado"],
         datasets: [{
-            label: 'Tipo de Ponencia',
+            label: 'Aprendices del semillero',
             backgroundColor: 'steelblue',
             data: [
                 34,

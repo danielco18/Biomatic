@@ -17,7 +17,6 @@
         public function charts(){
             require_once 'views/include/header.php';
             require_once 'views/modules/indicator_mod/ponencias_manage/charts.ponencia.php';
-            require_once 'views/include/footer.php';
         }
 
         public function create(){
