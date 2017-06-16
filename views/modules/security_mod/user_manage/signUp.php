@@ -1,3 +1,8 @@
+<?php
+if (isset($_SESSION["user"]["name"])) {
+    header("Location: type-indicator");
+}
+?>
  <div class="signIn-container">
         <div class="icons-container">
             <a href="home" class="icons-link">

@@ -15,7 +15,10 @@
         require_once "controller/$controller.controller.php";
         $controller = ucwords($controller).'Controller';
         $controller = new $controller;
-        $controller->main();
+		$controller->main();
+		if (isset($_SESSION["user"]["name"])) {
+			header("Location: type-indicator");
+		}
     }
 
 	if (isset($_GET["msn"])) {

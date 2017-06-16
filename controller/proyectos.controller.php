@@ -9,12 +9,18 @@
         }
 
         public function main(){
+            if (!isset($_SESSION["user"]["name"])) {
+                header("Location: home");
+            }
             require_once 'views/include/header.php';
             require_once 'views/modules/indicator_mod/proyectos_manage/add.proyecto.php';
             require_once 'views/include/footer.php';
         }
 
         public function charts(){
+            if (!isset($_SESSION["user"]["name"])) {
+                header("Location: home");
+            }
             require_once 'views/include/header.php';
             require_once 'views/modules/indicator_mod/proyectos_manage/charts.proyecto.php';
             require_once 'views/include/footer.php';
@@ -29,10 +35,13 @@
         }
 
         public function update(){
-          $data = $_GET["token"];
-          require_once 'views/include/header.php';
-          require_once 'views/modules/indicator_mod/proyectos_manage/update.proyecto.php';
-          require_once 'views/include/footer.php';
+            if (!isset($_SESSION["user"]["name"])) {
+                header("Location: home");
+            }
+            $data = $_GET["token"];
+            require_once 'views/include/header.php';
+            require_once 'views/modules/indicator_mod/proyectos_manage/update.proyecto.php';
+            require_once 'views/include/footer.php';
         }
 
         public function updateData(){

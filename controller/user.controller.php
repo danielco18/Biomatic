@@ -79,6 +79,10 @@
             echo json_encode($return);
         }
 
+        public function dashboard(){
+            header("Location: type-indicator");
+        }
+
         public function close(){
             session_destroy();
             header("Location: home");

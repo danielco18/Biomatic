@@ -9,12 +9,18 @@
         }
 
         public function main(){
+            if (!isset($_SESSION["user"]["name"])) {
+                header("Location: home");
+            }
             require_once 'views/include/header.php';
             require_once 'views/modules/indicator_mod/ponencias_manage/add.ponencia.php';
             require_once 'views/include/footer.php';
         }
 
         public function charts(){
+            if (!isset($_SESSION["user"]["name"])) {
+                header("Location: home");
+            }
             require_once 'views/include/header.php';
             require_once 'views/modules/indicator_mod/ponencias_manage/charts.ponencia.php';
         }
@@ -28,10 +34,13 @@
         }
 
         public function update(){
-          $data = $_GET["token"];
-          require_once 'views/include/header.php';
-          require_once 'views/modules/indicator_mod/ponencias_manage/update.ponencia.php';
-          require_once 'views/include/footer.php';
+            if (!isset($_SESSION["user"]["name"])) {
+                header("Location: home");
+            }
+            $data = $_GET["token"];
+            require_once 'views/include/header.php';
+            require_once 'views/modules/indicator_mod/ponencias_manage/update.ponencia.php';
+            require_once 'views/include/footer.php';
         }
 
         public function updateData(){

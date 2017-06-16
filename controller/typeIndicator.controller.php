@@ -25,10 +25,13 @@
         }
 
         public function update(){
-          $data = $_GET["token"];
-          require_once 'views/include/header.php';
-          require_once 'views/modules/indicator_mod/typeIndicator_manage/update.typeInd.php';
-          require_once 'views/include/footer.php';
+            if (!isset($_SESSION["user"]["name"])) {
+                header("Location: home");
+            }
+            $data = $_GET["token"];
+            require_once 'views/include/header.php';
+            require_once 'views/modules/indicator_mod/typeIndicator_manage/update.typeInd.php';
+            require_once 'views/include/footer.php';
         }
 
         public function updateData(){

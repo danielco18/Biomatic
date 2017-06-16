@@ -1,3 +1,8 @@
+<?php
+if (isset($_SESSION["user"]["name"])) {
+    header("Location: type-indicator");
+}
+?>
     <div class="main-container">
         <div class="container">
             <div class="row">
