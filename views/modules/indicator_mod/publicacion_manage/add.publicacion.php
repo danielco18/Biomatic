@@ -17,7 +17,13 @@
                                     <div class="form-signIn">
                                         <div class="form-group">
                                             <label for="" class="form-label">Tipo de Publicación</label>
-                                            <input type="text" name="data[0]" class="form-control form-input" id="">
+                                            <select class="form-control form-input form-select" name="data[0]">
+                                                <option value="Artículos">Artículos</option>
+                                                <option value="Libros">Libros</option>
+                                                <option value="Capítulos">Capítulos</option>
+                                                <option value="Tesis">Tesis</option>
+                                                <option value="Otros">Otros</option>
+                                            </select>
                                         </div>
                                         <div class="form-group">
                                             <label for="" class="form-label">Nombre de Editorial</label>

@@ -14,3 +14,4 @@ RewriteRule ^chart-ponencia$            index.php?c=ponencias&a=charts
 RewriteRule ^proyectos$                 index.php?c=proyectos
 RewriteRule ^chart-proyectos$           index.php?c=proyectos&a=charts
 RewriteRule ^productos$                 index.php?c=productos
+RewriteRule ^chart-productos$           index.php?c=productos&a=charts

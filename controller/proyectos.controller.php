@@ -23,13 +23,12 @@
             }
             require_once 'views/include/header.php';
             require_once 'views/modules/indicator_mod/proyectos_manage/charts.proyecto.php';
-            require_once 'views/include/footer.php';
         }
 
         public function create(){
             $data = $_POST["data"];
-            $data[18] = randAlphaNum('30');
-            $data[19] = "7iKfiK9WWNeWihUQ4wHLtoxhfdUuAP";
+            $data[19] = randAlphaNum('30');
+            $data[20] = "7iKfiK9WWNeWihUQ4wHLtoxhfdUuAP";
             $result = $this->ProyectosM->createProyectos($data);
             header("Location: index.php?c=proyectos&msn=$result");
         }

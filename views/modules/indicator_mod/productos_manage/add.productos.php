@@ -2,7 +2,7 @@
                         <div class="text-dashboard">
                             <h2 class="dashboard-texto">Gestionar Productos de Investigación</h2>
                             <div class="chart-link">
-                                <a href="chart-ponencia">
+                                <a href="chart-productos">
                                     <i class="material-icons">equalizer</i>
                                     <span>Ver gráficas</span>
                                 </a>

@@ -137,7 +137,7 @@
     };
     // Tipo ponencia
     var dataVinculados = {
-        labels: ["Ténico", "Tecnólogo", "Especialización tecnológica"],
+        labels: ["Técnico", "Tecnólogo", "Especialización tecnológica"],
         datasets: [{
             label: 'Aprendices del semillero',
             backgroundColor: '#248275',

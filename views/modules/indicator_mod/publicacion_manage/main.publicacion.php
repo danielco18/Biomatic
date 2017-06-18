@@ -4,9 +4,9 @@
                                     <thead>
                                         <tr class="main-fila">
                                             <th>Item</th>
-                                            <th>Nombre de Editorial</th>
+                                            <th>Tipo de publicación</th>
                                             <th>Categoria</th>
-                                            <th>Nombre de Publiación</th>
+                                            <th>Nombre de Publicación</th>
                                             <th width="120px">Acciones</th>
                                         </tr>
                                     </thead>
@@ -18,7 +18,7 @@
                                     ?>
                                         <tr>
                                             <td><?php echo $item; ?></td>
-                                        <td><?php echo $row["pub_nombreEditorial"]; ?></td>
+                                        <td><?php echo $row["pub_tipoPublicacion"]; ?></td>
                                         <td><?php echo $row["pub_categoria"]; ?></td>
                                         <td><?php echo $row["pub_nombrePublicacion"]; ?></td>
                                             <td>

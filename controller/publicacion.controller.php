@@ -18,9 +18,11 @@
         }
 
         public function charts(){
+            if (!isset($_SESSION["user"]["name"])) {
+                header("Location: home");
+            }
             require_once 'views/include/header.php';
             require_once 'views/modules/indicator_mod/publicacion_manage/charts.publicacion.php';
-            require_once 'views/include/footer.php';
         }
 
         public function create(){
