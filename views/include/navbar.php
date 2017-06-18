@@ -42,6 +42,12 @@
                                 <span class="menu-subtext">NÚMERO DE PROYECTOS<span>
                             </a>
                         </li>
+                        <li class="menu-item">
+                            <a href="productos" class="menu-link">
+                                <i class="material-icons menu-icons">done</i>
+                                <span class="menu-subtext">PRODUCTOS<span>
+                            </a>
+                        </li>
                     </ul>
                 </nav>
             </div>

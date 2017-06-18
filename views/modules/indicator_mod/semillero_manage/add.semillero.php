@@ -76,7 +76,7 @@
                         </div>
                         <div class="col">
                             <div class="form-group">
-                                <label for="" class="form-label">Categoria</label>
+                                <label for="" class="form-label">Programa de formación</label>
                                 <select name="data[8]" class="form-control form-input">
                                     <option value="ADSI">ADSI</option>
                                     <option value="Sistemas de gestión ambiental">Sistemas de gestión ambiental</option>

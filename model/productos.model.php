@@ -1,6 +1,6 @@
 <?php
 
-    class SemilleroModel extends DataBase{
+    class ProductosModel extends DataBase{
         private $pdo;
         public function __CONSTRUCT(){
             try {
@@ -11,14 +11,11 @@
             }
         }
 
-        public function createSemillero($data){
+        public function createProductos($data){
             try {
-                $sql = "INSERT INTO semillero_investigacion VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+                $sql = "INSERT INTO productos VALUES (?,?,?,?,?,?,?,?,?,?)";
                 $query = $this->pdo->prepare($sql);
-                $query->execute(array(
-            $data[15],$data[0],$data[1],$data[2],$data[3],$data[4],$data[5],$data[6],
-            $data[7],$data[8],$data[9],$data[10],$data[1],$data[12],$data[13],$data[14],$data[16]
-                        ));
+                $query->execute(array($data[8],$data[0],$data[1],$data[2],$data[3],$data[4],$data[5],$data[6],$data[7],$data[9]));
                 $result = "Datos ingresados correctamente";
             } catch (PDOException $e) {
                 die($e->getMessage()." ".$e->getLine()." ".$e->getFile());
@@ -26,9 +23,9 @@
             return $result;
         }
 
-        public function readSemillero(){
+        public function readProductos(){
             try {
-                $sql = "SELECT * FROM semillero_investigacion";
+                $sql = "SELECT * FROM productos ORDER BY pro_nombre";
                 $query = $this->pdo->prepare($sql);
                 $query->execute();
                 $result = $query->fetchALL(PDO::FETCH_BOTH);
@@ -38,9 +35,9 @@
             return $result;
         }
 
-        public function readSemilleroByCode($data){
+        public function readProductosByCode($data){
             try {
-                $sql = "SELECT * FROM semillero_investigacion WHERE semI_code = ?";
+                $sql = "SELECT * FROM productos WHERE pro_code = ?";
                 $query = $this->pdo->prepare($sql);
                 $query->execute(array($data));
                 $result = $query->fetch(PDO::FETCH_BOTH);
@@ -50,29 +47,20 @@
             return $result;
         }
 
-        public function updateSemillero($data){
+        public function updateProductos($data){
             try {
-                $sql = "UPDATE semillero_investigacion SET
-                        semI_nombre = ?,
-                        semI_documento = ?,
-                        seml_fechaNac = ?,
-                        seml_email = ?,
-                        seml_celular = ?,
-                        seml_usuarioClave = ?,
-                        seml_ficha = ?,
-                        seml_nivelFormacion = ?,
-                        semI_categoria = ?,
-                        semI_fechaIni = ?,
-                        semI_fechaFin = ?,
-                        semI_proyectos = ?,
-                        semI_horasSemanales = ?,
-                        semI_productos = ?,
-                        dates = ?
-                        WHERE semI_code = ?";
+                $sql = "UPDATE productos SET 
+                        pro_nombre = ?,
+                        pro_tipoProducto = ?,
+                        pro_autores = ?, 
+                        pro_programaFormacion = ?, 
+                        pro_proyectosAsociados = ?, 
+                        pro_horasSemales = ?, 
+                        pro_Productos = ?, 
+                        dates = ? 
+                        WHERE pro_code = ?";
                 $query = $this->pdo->prepare($sql);
-                $query->execute(array(
-                            $data[0],$data[1],$data[2],$data[3],$data[4],$data[5],$data[6],$data[7],
-                            $data[8],$data[9],$data[10],$data[11],$data[12],$data[13],$data[14],$data[15]));
+                $query->execute(array($data[0],$data[1],$data[2],$data[3],$data[4],$data[5],$data[6],$data[7],$data[8]));
                 $result = "Datos actualizados correctamente";
             } catch (PDOException $e) {
                 die($e->getMessage()." ".$e->getLine()." ".$e->getFile());
@@ -80,9 +68,9 @@
             return $result;
         }
 
-        public function deleteSemillero($data){
+        public function deleteProductos($data){
             try {
-                $sql = "DELETE FROM semillero_investigacion WHERE semI_code = ?";
+                $sql = "DELETE FROM productos WHERE pro_code = ?";
                 $query = $this->pdo->prepare($sql);
                 $query->execute(array($data));
                 $result = "Datos eliminados correctamente";
