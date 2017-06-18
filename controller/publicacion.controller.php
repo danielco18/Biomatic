@@ -54,5 +54,15 @@
             $result = $this->PublicacionM->deletePublicacion($data);
             header("Location: index.php?c=publicacion&msn=$result");
         }
+
+        public function data(){
+            $result = $this->PublicacionM->readPublicacionesIn2012();
+            echo "<h1>2012</h1>"."<br>";
+            echo "<span>Artículos</span>"." ".$result[0][1]."<br>";
+            echo "<span>Capítulos</span>"." ".$result[1][1]."<br>";
+            echo "<span>Libros</span>"." ".$result[2][1]."<br>";
+            echo "<span>Otros</span>"." ".$result[3][1]."<br>";
+            echo "<span>Tesis</span>"." ".$result[4][1]."<br>";
+        }
     }
 ?>

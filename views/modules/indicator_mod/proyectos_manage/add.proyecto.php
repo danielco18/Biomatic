@@ -41,8 +41,8 @@
                                 <label for="" class="form-label">Entidad</label>
                                 <select name="data[3]" class="form-control form-input">
                                     <option value="SENA">SENA</option>
-                                    <option value="Confinanciados x Empresas">Confinanciados x Empresas</option>
-                                    <option value="Confinanciación de otras entidades">Confinanciación de otras entidades</option>
+                                    <option value="Cofinanciados x Empresas">Cofinanciados x Empresas</option>
+                                    <option value="Cofinanciación de otras entidades">Cofinanciación de otras entidades</option>
                                 </select>
                             </div>
                         </div>

@@ -98,6 +98,22 @@
             return $result;
         }
 
+        public function readProyectosIn2012(){
+            try {
+                $sql = "SELECT np_Entidad, COUNT(*) 
+                        FROM n_proyectos 
+                        WHERE dates = '2012' 
+                        GROUP BY np_Entidad";
+                $query = $this->pdo->prepare($sql);
+                $query->execute();
+                $result = $query->fetchALL(PDO::FETCH_BOTH);
+            } catch (PDOException $e) {
+                die($e->getMessage()." ".$e->getLine()." ".$e->getFile());
+            }
+            return $result;
+        }
+
+
         public function __DESTRUCT(){
             DataBase::disconnect();
         }

@@ -54,5 +54,13 @@
             $result = $this->ProyectosM->deleteProyectos($data);
             header("Location: index.php?c=proyectos&msn=$result");
         }
+
+        public function data(){
+            $result = $this->ProyectosM->readProyectosIn2012();
+            echo "<h1>2012</h1>"."<br>";
+            echo "<span>Cofinanciación de otras entidades</span>"." ".$result[0][1]."<br>";
+            echo "<span>Cofinanciados x Empresas</span>"." ".$result[1][1]."<br>";
+            echo "<span>Sena</span>"." ".$result[2][1]."<br>";
+        }
     }
 ?>

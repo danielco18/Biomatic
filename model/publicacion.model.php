@@ -71,6 +71,23 @@
             return $result;
         }
 
+        // Gráficas
+
+        public function readPublicacionesIn2012(){
+            try {
+                $sql = "SELECT pub_tipoPublicacion, COUNT(*) 
+                        FROM publicacion 
+                        WHERE dates = '2012' 
+                        GROUP BY pub_tipoPublicacion";
+                $query = $this->pdo->prepare($sql);
+                $query->execute();
+                $result = $query->fetchALL(PDO::FETCH_BOTH);
+            } catch (PDOException $e) {
+                die($e->getMessage()." ".$e->getLine()." ".$e->getFile());
+            }
+            return $result;
+        }
+
         public function __DESTRUCT(){
             DataBase::disconnect();
         }
