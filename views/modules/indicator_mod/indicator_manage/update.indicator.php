@@ -38,7 +38,7 @@
                                             <div class="row">
                                                 <div class="col">
                                                     <div class="form-group">
-                                                        <label for="" class="form-label">Fecha Actualización</label>
+                                                        <label for="" class="form-label">Fecha de Actualización</label>
                                                         <input type="text" name="data[]" value="<?php echo $Indicator['ind_fechaActualizacion'];?>" class="form-control form-input">
                                                     </div>
                                                 </div>
@@ -58,7 +58,7 @@
                                                 </div>
                                                 <div class="col">
                                                     <div class="form-group">
-                                                        <label for="" class="form-label">Definicion</label>
+                                                        <label for="" class="form-label">Definición</label>
                                                         <input type="text" name="data[]" value="<?php echo $Indicator['ind_definicion'];?>" class="form-control form-input">
                                                     </div>
                                                 </div>
@@ -72,7 +72,7 @@
                                                 </div>
                                                 <div class="col">
                                                     <div class="form-group">
-                                                        <label for="" class="form-label">Metodo medición</label>
+                                                        <label for="" class="form-label">Metodo de medición</label>
                                                         <input type="text" name="data[]" value="<?php echo $Indicator['ind_metodoMedicion'];?>" class="form-control form-input">
                                                     </div>
                                                 </div>
@@ -80,13 +80,13 @@
                                             <div class="row">
                                                 <div class="col">
                                                     <div class="form-group">
-                                                        <label for="" class="form-label">Unidad de medidad</label>
+                                                        <label for="" class="form-label">Unidad de medida</label>
                                                         <input type="text" name="data[]" value="<?php echo $Indicator['ind_unidadMedida'];?>" class="form-control form-input">
                                                     </div>
                                                 </div>
                                                 <div class="col">
                                                     <div class="form-group">
-                                                        <label for="" class="form-label">Formula de medida</label>
+                                                        <label for="" class="form-label">Fórmula de medida</label>
                                                         <input type="text" name="data[]" value="<?php echo $Indicator['ind_formulaMedida'];?>" class="form-control form-input">
                                                     </div>
                                                 </div>
@@ -100,7 +100,7 @@
                                                 </div>
                                                 <div class="col">
                                                     <div class="form-group">
-                                                        <label for="" class="Concepto estadistico"></label>
+                                                        <label for="" class="form-label">Concepto estadístico</label>
                                                         <input type="text" name="data[]" value="<?php echo $Indicator['ind_conceptoEstadistico'];?>" class="form-control form-input">
                                                     </div>
                                                 </div>
@@ -108,13 +108,13 @@
                                             <div class="row">
                                                 <div class="col">
                                                     <div class="form-group">
-                                                        <label for="" class="form-label">Frecuenta calculo variable</label>
+                                                        <label for="" class="form-label">Frecuencia de cálculo de la variable</label>
                                                         <input type="text" name="data[]" value="<?php echo $Indicator['ind_frecuenciaCalculoVariable'];?>" class="form-control form-input">
                                                     </div>
                                                 </div>
                                                 <div class="col">
                                                     <div class="form-group">
-                                                        <label for="" class="form-label">Fuenta imformación</label>
+                                                        <label for="" class="form-label">Fuente de información</label>
                                                         <input type="text" name="data[]" value="<?php echo $Indicator['ind_fuenteInformacion'];?>" class="form-control form-input">
                                                     </div>
                                                 </div>
@@ -128,7 +128,7 @@
                                                 </div>
                                                 <div class="col">
                                                     <div class="form-group">
-                                                        <label for="" class="form-label">Desagracion tematica</label>
+                                                        <label for="" class="form-label">Desagregración temática</label>
                                                         <input type="text" name="data[]" value="<?php echo $Indicator['ind_desagracionTematica'];?>" class="form-control form-input">
                                                     </div>
                                                 </div>
@@ -136,13 +136,13 @@
                                             <div class="row">
                                                 <div class="col">
                                                     <div class="form-group">
-                                                        <label for="" class="form-label">Desagracion geografica</label>
+                                                        <label for="" class="form-label">Desagregración geográfica</label>
                                                         <input type="text" name="data[]" value="<?php echo $Indicator['ind_desagracionGeografica'];?>" class="form-control form-input">
                                                     </div>
                                                 </div>
                                                 <div class="col">
                                                     <div class="form-group">
-                                                        <label for="" class="form-label">Limitaciones</label>
+                                                        <label for="" class="form-label">Limitaciones del indicador</label>
                                                         <input type="text" name="data[]" value="<?php echo $Indicator['ind_limitaciones'];?>" class="form-control form-input">
                                                     </div>
                                                 </div>
