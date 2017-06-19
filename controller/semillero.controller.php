@@ -54,5 +54,28 @@
             $result = $this->SemilleroM->deleteSemillero($data);
             header("Location: index.php?c=semillero&msn=$result");
         }
+
+        public function data(){
+            $readSemilleroIn2012 = $this->SemilleroM->readSemilleroIn2012();
+            $readSemilleroIn2013 = $this->SemilleroM->readSemilleroIn2013();
+            $readSemilleroIn2014 = $this->SemilleroM->readSemilleroIn2014();
+            $readSemilleroIn2015 = $this->SemilleroM->readSemilleroIn2015();
+            $readSemilleroIn2016 = $this->SemilleroM->readSemilleroIn2016();
+            $readSemilleroIn2017 = $this->SemilleroM->readSemilleroIn2017();
+            $readSemilleroIn2018 = $this->SemilleroM->readSemilleroIn2018();
+            $readSemilleroTotal = $this->SemilleroM->readSemilleroTotal();
+            $readNivelTotal = $this->SemilleroM->readNivelTotal();
+            $data = array(  $readSemilleroIn2012,
+                            $readSemilleroIn2013,
+                            $readSemilleroIn2014,
+                            $readSemilleroIn2015,
+                            $readSemilleroIn2016,
+                            $readSemilleroIn2017,
+                            $readSemilleroIn2018,
+                            $readSemilleroTotal,
+                            $readNivelTotal
+                        );
+            echo json_encode($data);
+        }
     }
 ?>

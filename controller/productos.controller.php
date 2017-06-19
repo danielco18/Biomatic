@@ -54,5 +54,19 @@
             $result = $this->ProductosM->deleteProductos($data);
             header("Location: index.php?c=productos&msn=$result");
         }
+
+        public function data(){
+            $readProductosIn2016 = $this->ProductosM->readProductosIn2016();
+            $readProductosIn2017 = $this->ProductosM->readProductosIn2017();
+            $readProductosIn2018 = $this->ProductosM->readProductosIn2018();
+            $readProductosTotal = $this->ProductosM->readProductosTotal();
+            $data = array(  $readProductosIn2016,
+                            $readProductosIn2017,
+                            $readProductosIn2018,
+                            $readProductosTotal
+                        );
+            //echo $data[0]["2012"][0];
+            echo json_encode($data);
+        }
     }
 ?>

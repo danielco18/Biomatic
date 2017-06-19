@@ -7,7 +7,7 @@ $.ajax({
             labels: ["2012", "2013", "2014", "2015", "2016", "2017", "2018"],
             datasets: [{
                 label: 'Regionales',
-                backgroundColor: '#457f3a',
+                backgroundColor: '#004d40',
                 data: [
                     data["2012"][0],
                     data["2013"][0],
@@ -19,7 +19,7 @@ $.ajax({
                 ]
             }, {
                 label: 'Nacionales',
-                backgroundColor: '#fc7324',
+                backgroundColor: '#00897b',
                 data: [
                     data["2012"][1],
                     data["2013"][1],
@@ -31,7 +31,7 @@ $.ajax({
                 ]
             }, {
                 label: 'Internacionales',
-                backgroundColor: '#248275',
+                backgroundColor: '#80cbc4',
                 data: [
                     data["2012"][2],
                     data["2013"][2],
@@ -47,7 +47,7 @@ $.ajax({
             labels: ["Ponencia Oral", "Ponencia Póster"],
             datasets: [{
                 label: 'Tipo de Ponencia',
-                backgroundColor: '#248275',
+                backgroundColor: '#009688',
                 data: [
                     data["Tipo"][0],
                     data["Tipo"][1]

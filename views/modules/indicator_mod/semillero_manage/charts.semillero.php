@@ -10,7 +10,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-8 offset-lg-2">
+                            <div class="col-lg-10 offset-lg-1">
                                 <div style="width: 100%">
                                     <canvas id="semillero"></canvas>
                                 </div>
@@ -24,12 +24,12 @@
             </div>
         </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.min.js"></script>
+    <script src="views/assets/js/jquery.min.js"></script>
+    <script src="views/assets/js/Chart.bundle.min.js"></script>
     <script src="views/assets/js/sweetalert.min.js"></script>
-    <script src="https://cdn.datatables.net/v/dt/dt-1.10.15/datatables.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    <script src="views/assets/js/datatables.min.js"></script>
+    <script src="views/assets/js/tether.min.js"></script>
+    <script src="views/assets/js/bootstrap.min.js"></script>
     <script src="views/assets/js/chart-semillero.js"></script>
 </body>
 </html>

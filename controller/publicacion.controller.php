@@ -56,13 +56,26 @@
         }
 
         public function data(){
-            $result = $this->PublicacionM->readPublicacionesIn2012();
-            echo "<h1>2012</h1>"."<br>";
-            echo "<span>Artículos</span>"." ".$result[0][1]."<br>";
-            echo "<span>Capítulos</span>"." ".$result[1][1]."<br>";
-            echo "<span>Libros</span>"." ".$result[2][1]."<br>";
-            echo "<span>Otros</span>"." ".$result[3][1]."<br>";
-            echo "<span>Tesis</span>"." ".$result[4][1]."<br>";
+
+            $readPublicacionesIn2012 = $this->PublicacionM->readPublicacionesIn2012();
+            $readPublicacionesIn2013 = $this->PublicacionM->readPublicacionesIn2013();
+            $readPublicacionesIn2014 = $this->PublicacionM->readPublicacionesIn2014();
+            $readPublicacionesIn2015 = $this->PublicacionM->readPublicacionesIn2015();
+            $readPublicacionesIn2016 = $this->PublicacionM->readPublicacionesIn2016();
+            $readPublicacionesIn2017 = $this->PublicacionM->readPublicacionesIn2017();
+            $readPublicacionesIn2018 = $this->PublicacionM->readPublicacionesIn2018();
+            $readPublicacionesTotal = $this->PublicacionM->readPublicacionesTotal();
+            $data = array(  $readPublicacionesIn2012,
+                            $readPublicacionesIn2013,
+                            $readPublicacionesIn2014,
+                            $readPublicacionesIn2015,
+                            $readPublicacionesIn2016,
+                            $readPublicacionesIn2017,
+                            $readPublicacionesIn2018,
+                            $readPublicacionesTotal
+                        );
+            //echo $data[0]["2012"][0];
+            echo json_encode($data);
         }
     }
 ?>

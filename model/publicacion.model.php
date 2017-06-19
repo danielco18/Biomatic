@@ -75,19 +75,203 @@
 
         public function readPublicacionesIn2012(){
             try {
-                $sql = "SELECT pub_tipoPublicacion, COUNT(*) 
-                        FROM publicacion 
-                        WHERE dates = '2012' 
-                        GROUP BY pub_tipoPublicacion";
+                $sql = "SELECT 
+                            SUM(CASE WHEN pub_tipoPublicacion = 'Artículos'  AND dates = '2012' THEN 1 ELSE 0 END) Artículos, 
+                            SUM(CASE WHEN pub_tipoPublicacion = 'Capítulos' AND dates = '2012'  THEN 1 ELSE 0 END) Capítulos, 
+                            SUM(CASE WHEN pub_tipoPublicacion = 'Libros'  AND dates = '2012' THEN 1 ELSE 0 END) Libros,
+                            SUM(CASE WHEN pub_tipoPublicacion = 'Otros'  AND dates = '2012' THEN 1 ELSE 0 END) Otros,
+                            SUM(CASE WHEN pub_tipoPublicacion = 'Tesis'  AND dates = '2012' THEN 1 ELSE 0 END) Tesis
+                        FROM publicacion";
                 $query = $this->pdo->prepare($sql);
                 $query->execute();
                 $result = $query->fetchALL(PDO::FETCH_BOTH);
             } catch (PDOException $e) {
                 die($e->getMessage()." ".$e->getLine()." ".$e->getFile());
             }
+            $result = array('2012' => 
+                                [$result[0][0],
+                                $result[0][1],
+                                $result[0][2],
+                                $result[0][3],
+                                $result[0][4]]
+                            );
             return $result;
         }
 
+        public function readPublicacionesIn2013(){
+            try {
+                $sql = "SELECT 
+                            SUM(CASE WHEN pub_tipoPublicacion = 'Artículos'  AND dates = '2013' THEN 1 ELSE 0 END) Artículos, 
+                            SUM(CASE WHEN pub_tipoPublicacion = 'Capítulos' AND dates = '2013'  THEN 1 ELSE 0 END) Capítulos, 
+                            SUM(CASE WHEN pub_tipoPublicacion = 'Libros'  AND dates = '2013' THEN 1 ELSE 0 END) Libros,
+                            SUM(CASE WHEN pub_tipoPublicacion = 'Otros'  AND dates = '2013' THEN 1 ELSE 0 END) Otros,
+                            SUM(CASE WHEN pub_tipoPublicacion = 'Tesis'  AND dates = '2013' THEN 1 ELSE 0 END) Tesis
+                        FROM publicacion";
+                $query = $this->pdo->prepare($sql);
+                $query->execute();
+                $result = $query->fetchALL(PDO::FETCH_BOTH);
+            } catch (PDOException $e) {
+                die($e->getMessage()." ".$e->getLine()." ".$e->getFile());
+            }
+            $result = array('2013' => 
+                                [$result[0][0],
+                                $result[0][1],
+                                $result[0][2],
+                                $result[0][3],
+                                $result[0][4]]
+                            );
+            return $result;
+        }
+
+        public function readPublicacionesIn2014(){
+            try {
+                $sql = "SELECT 
+                            SUM(CASE WHEN pub_tipoPublicacion = 'Artículos'  AND dates = '2014' THEN 1 ELSE 0 END) Artículos, 
+                            SUM(CASE WHEN pub_tipoPublicacion = 'Capítulos' AND dates = '2014'  THEN 1 ELSE 0 END) Capítulos, 
+                            SUM(CASE WHEN pub_tipoPublicacion = 'Libros'  AND dates = '2014' THEN 1 ELSE 0 END) Libros,
+                            SUM(CASE WHEN pub_tipoPublicacion = 'Otros'  AND dates = '2014' THEN 1 ELSE 0 END) Otros,
+                            SUM(CASE WHEN pub_tipoPublicacion = 'Tesis'  AND dates = '2014' THEN 1 ELSE 0 END) Tesis
+                        FROM publicacion";
+                $query = $this->pdo->prepare($sql);
+                $query->execute();
+                $result = $query->fetchALL(PDO::FETCH_BOTH);
+            } catch (PDOException $e) {
+                die($e->getMessage()." ".$e->getLine()." ".$e->getFile());
+            }
+            $result = array('2014' => 
+                                [$result[0][0],
+                                $result[0][1],
+                                $result[0][2],
+                                $result[0][3],
+                                $result[0][4]]
+                            );
+            return $result;
+        }
+
+        public function readPublicacionesIn2015(){
+            try {
+                $sql = "SELECT 
+                            SUM(CASE WHEN pub_tipoPublicacion = 'Artículos'  AND dates = '2015' THEN 1 ELSE 0 END) Artículos, 
+                            SUM(CASE WHEN pub_tipoPublicacion = 'Capítulos' AND dates = '2015'  THEN 1 ELSE 0 END) Capítulos, 
+                            SUM(CASE WHEN pub_tipoPublicacion = 'Libros'  AND dates = '2015' THEN 1 ELSE 0 END) Libros,
+                            SUM(CASE WHEN pub_tipoPublicacion = 'Otros'  AND dates = '2015' THEN 1 ELSE 0 END) Otros,
+                            SUM(CASE WHEN pub_tipoPublicacion = 'Tesis'  AND dates = '2015' THEN 1 ELSE 0 END) Tesis
+                        FROM publicacion";
+                $query = $this->pdo->prepare($sql);
+                $query->execute();
+                $result = $query->fetchALL(PDO::FETCH_BOTH);
+            } catch (PDOException $e) {
+                die($e->getMessage()." ".$e->getLine()." ".$e->getFile());
+            }
+            $result = array('2015' => 
+                                [$result[0][0],
+                                $result[0][1],
+                                $result[0][2],
+                                $result[0][3],
+                                $result[0][4]]
+                            );
+            return $result;
+        }
+
+        public function readPublicacionesIn2016(){
+            try {
+                $sql = "SELECT 
+                            SUM(CASE WHEN pub_tipoPublicacion = 'Artículos'  AND dates = '2016' THEN 1 ELSE 0 END) Artículos, 
+                            SUM(CASE WHEN pub_tipoPublicacion = 'Capítulos' AND dates = '2016'  THEN 1 ELSE 0 END) Capítulos, 
+                            SUM(CASE WHEN pub_tipoPublicacion = 'Libros'  AND dates = '2016' THEN 1 ELSE 0 END) Libros,
+                            SUM(CASE WHEN pub_tipoPublicacion = 'Otros'  AND dates = '2016' THEN 1 ELSE 0 END) Otros,
+                            SUM(CASE WHEN pub_tipoPublicacion = 'Tesis'  AND dates = '2016' THEN 1 ELSE 0 END) Tesis
+                        FROM publicacion";
+                $query = $this->pdo->prepare($sql);
+                $query->execute();
+                $result = $query->fetchALL(PDO::FETCH_BOTH);
+            } catch (PDOException $e) {
+                die($e->getMessage()." ".$e->getLine()." ".$e->getFile());
+            }
+            $result = array('2016' => 
+                                [$result[0][0],
+                                $result[0][1],
+                                $result[0][2],
+                                $result[0][3],
+                                $result[0][4]]
+                            );
+            return $result;
+        }
+
+        public function readPublicacionesIn2017(){
+            try {
+                $sql = "SELECT 
+                            SUM(CASE WHEN pub_tipoPublicacion = 'Artículos'  AND dates = '2017' THEN 1 ELSE 0 END) Artículos, 
+                            SUM(CASE WHEN pub_tipoPublicacion = 'Capítulos' AND dates = '2017'  THEN 1 ELSE 0 END) Capítulos, 
+                            SUM(CASE WHEN pub_tipoPublicacion = 'Libros'  AND dates = '2017' THEN 1 ELSE 0 END) Libros,
+                            SUM(CASE WHEN pub_tipoPublicacion = 'Otros'  AND dates = '2017' THEN 1 ELSE 0 END) Otros,
+                            SUM(CASE WHEN pub_tipoPublicacion = 'Tesis'  AND dates = '2017' THEN 1 ELSE 0 END) Tesis
+                        FROM publicacion";
+                $query = $this->pdo->prepare($sql);
+                $query->execute();
+                $result = $query->fetchALL(PDO::FETCH_BOTH);
+            } catch (PDOException $e) {
+                die($e->getMessage()." ".$e->getLine()." ".$e->getFile());
+            }
+            $result = array('2017' => 
+                                [$result[0][0],
+                                $result[0][1],
+                                $result[0][2],
+                                $result[0][3],
+                                $result[0][4]]
+                            );
+            return $result;
+        }
+
+        public function readPublicacionesIn2018(){
+            try {
+                $sql = "SELECT 
+                            SUM(CASE WHEN pub_tipoPublicacion = 'Artículos'  AND dates = '2018' THEN 1 ELSE 0 END) Artículos, 
+                            SUM(CASE WHEN pub_tipoPublicacion = 'Capítulos' AND dates = '2018'  THEN 1 ELSE 0 END) Capítulos, 
+                            SUM(CASE WHEN pub_tipoPublicacion = 'Libros'  AND dates = '2018' THEN 1 ELSE 0 END) Libros,
+                            SUM(CASE WHEN pub_tipoPublicacion = 'Otros'  AND dates = '2018' THEN 1 ELSE 0 END) Otros,
+                            SUM(CASE WHEN pub_tipoPublicacion = 'Tesis'  AND dates = '2018' THEN 1 ELSE 0 END) Tesis
+                        FROM publicacion";
+                $query = $this->pdo->prepare($sql);
+                $query->execute();
+                $result = $query->fetchALL(PDO::FETCH_BOTH);
+            } catch (PDOException $e) {
+                die($e->getMessage()." ".$e->getLine()." ".$e->getFile());
+            }
+            $result = array('2018' => 
+                                [$result[0][0],
+                                $result[0][1],
+                                $result[0][2],
+                                $result[0][3],
+                                $result[0][4]]
+                            );
+            return $result;
+        }
+
+        public function readPublicacionesTotal(){
+            try {
+                $sql = "SELECT 
+                            SUM(CASE WHEN pub_tipoPublicacion = 'Artículos'   THEN 1 ELSE 0 END) Artículos, 
+                            SUM(CASE WHEN pub_tipoPublicacion = 'Capítulos' THEN 1 ELSE 0 END) Capítulos, 
+                            SUM(CASE WHEN pub_tipoPublicacion = 'Libros'  THEN 1 ELSE 0 END) Libros,
+                            SUM(CASE WHEN pub_tipoPublicacion = 'Otros'  THEN 1 ELSE 0 END) Otros,
+                            SUM(CASE WHEN pub_tipoPublicacion = 'Tesis'  THEN 1 ELSE 0 END) Tesis
+                        FROM publicacion";
+                $query = $this->pdo->prepare($sql);
+                $query->execute();
+                $result = $query->fetchALL(PDO::FETCH_BOTH);
+            } catch (PDOException $e) {
+                die($e->getMessage()." ".$e->getLine()." ".$e->getFile());
+            }
+            $result = array('Total' => 
+                                [$result[0][0],
+                                $result[0][1],
+                                $result[0][2],
+                                $result[0][3],
+                                $result[0][4]]
+                            );
+            return $result;
+        }
         public function __DESTRUCT(){
             DataBase::disconnect();
         }

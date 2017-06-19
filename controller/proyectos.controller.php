@@ -56,11 +56,25 @@
         }
 
         public function data(){
-            $result = $this->ProyectosM->readProyectosIn2012();
-            echo "<h1>2012</h1>"."<br>";
-            echo "<span>Cofinanciación de otras entidades</span>"." ".$result[0][1]."<br>";
-            echo "<span>Cofinanciados x Empresas</span>"." ".$result[1][1]."<br>";
-            echo "<span>Sena</span>"." ".$result[2][1]."<br>";
+            $readProyectosIn2012 = $this->ProyectosM->readProyectosIn2012();
+            $readProyectosIn2013 = $this->ProyectosM->readProyectosIn2013();
+            $readProyectosIn2014 = $this->ProyectosM->readProyectosIn2014();
+            $readProyectosIn2015 = $this->ProyectosM->readProyectosIn2015();
+            $readProyectosIn2016 = $this->ProyectosM->readProyectosIn2016();
+            $readProyectosIn2017 = $this->ProyectosM->readProyectosIn2017();
+            $readProyectosIn2018 = $this->ProyectosM->readProyectosIn2018();
+            $readProyectosTotal = $this->ProyectosM->readProyectosTotal();
+            $data = array(  $readProyectosIn2012,
+                            $readProyectosIn2013,
+                            $readProyectosIn2014,
+                            $readProyectosIn2015,
+                            $readProyectosIn2016,
+                            $readProyectosIn2017,
+                            $readProyectosIn2018,
+                            $readProyectosTotal
+                        );
+            //echo $data[0]["2012"][0];
+            echo json_encode($data);
         }
     }
 ?>
