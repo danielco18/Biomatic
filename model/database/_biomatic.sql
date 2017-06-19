@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.5.2
--- https://www.phpmyadmin.net/
+-- version 4.5.1
+-- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: Jun 14, 2017 at 11:23 PM
--- Server version: 10.1.21-MariaDB
--- PHP Version: 5.6.30
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 19-06-2017 a las 21:28:18
+-- Versión del servidor: 10.1.13-MariaDB
+-- Versión de PHP: 5.6.23
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `_biomatic`
+-- Base de datos: `_biomatic`
 --
 CREATE DATABASE IF NOT EXISTS `_biomatic` DEFAULT CHARACTER SET utf8 COLLATE utf8_spanish_ci;
 USE `_biomatic`;
@@ -25,7 +25,7 @@ USE `_biomatic`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `indicator`
+-- Estructura de tabla para la tabla `indicator`
 --
 
 DROP TABLE IF EXISTS `indicator`;
@@ -56,7 +56,7 @@ CREATE TABLE `indicator` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `n_proyectos`
+-- Estructura de tabla para la tabla `n_proyectos`
 --
 
 DROP TABLE IF EXISTS `n_proyectos`;
@@ -65,6 +65,7 @@ CREATE TABLE `n_proyectos` (
   `np_tipoInvestigacion` longtext COLLATE utf8_spanish_ci,
   `np_tituloInvestigacion` longtext COLLATE utf8_spanish_ci,
   `np_alcanceInvestigacion` longtext COLLATE utf8_spanish_ci,
+  `np_Entidad` longtext COLLATE utf8_spanish_ci,
   `np_institucion` longtext COLLATE utf8_spanish_ci,
   `np_caracterInstitucion` longtext COLLATE utf8_spanish_ci,
   `np_investigadores` longtext COLLATE utf8_spanish_ci,
@@ -86,7 +87,7 @@ CREATE TABLE `n_proyectos` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ponencias`
+-- Estructura de tabla para la tabla `ponencias`
 --
 
 DROP TABLE IF EXISTS `ponencias`;
@@ -105,7 +106,27 @@ CREATE TABLE `ponencias` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `publicacion`
+-- Estructura de tabla para la tabla `productos`
+--
+
+DROP TABLE IF EXISTS `productos`;
+CREATE TABLE `productos` (
+  `pro_code` varchar(30) COLLATE utf8_spanish_ci NOT NULL,
+  `pro_nombre` longtext COLLATE utf8_spanish_ci,
+  `pro_tipoProducto` longtext COLLATE utf8_spanish_ci,
+  `pro_autores` longtext COLLATE utf8_spanish_ci,
+  `pro_programaFormacion` longtext COLLATE utf8_spanish_ci,
+  `pro_proyectosAsociados` longtext COLLATE utf8_spanish_ci,
+  `pro_horasSemales` longtext COLLATE utf8_spanish_ci,
+  `pro_Productos` longtext COLLATE utf8_spanish_ci,
+  `dates` varchar(4) COLLATE utf8_spanish_ci NOT NULL,
+  `pro_typeInd` varchar(30) COLLATE utf8_spanish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `publicacion`
 --
 
 DROP TABLE IF EXISTS `publicacion`;
@@ -124,7 +145,7 @@ CREATE TABLE `publicacion` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `semillero_investigacion`
+-- Estructura de tabla para la tabla `semillero_investigacion`
 --
 
 DROP TABLE IF EXISTS `semillero_investigacion`;
@@ -137,6 +158,7 @@ CREATE TABLE `semillero_investigacion` (
   `seml_celular` varchar(20) COLLATE utf8_spanish_ci DEFAULT NULL,
   `seml_usuarioClave` longtext COLLATE utf8_spanish_ci,
   `seml_ficha` varchar(20) COLLATE utf8_spanish_ci DEFAULT NULL,
+  `seml_nivelFormacion` varchar(40) COLLATE utf8_spanish_ci DEFAULT NULL,
   `semI_categoria` varchar(100) COLLATE utf8_spanish_ci DEFAULT NULL,
   `semI_fechaIni` varchar(30) COLLATE utf8_spanish_ci DEFAULT NULL,
   `semI_fechaFin` varchar(30) COLLATE utf8_spanish_ci DEFAULT NULL,
@@ -150,7 +172,7 @@ CREATE TABLE `semillero_investigacion` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `type_indicator`
+-- Estructura de tabla para la tabla `type_indicator`
 --
 
 DROP TABLE IF EXISTS `type_indicator`;
@@ -162,11 +184,12 @@ CREATE TABLE `type_indicator` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
--- Dumping data for table `type_indicator`
+-- Volcado de datos para la tabla `type_indicator`
 --
 
 INSERT INTO `type_indicator` (`typeIn_code`, `typeIn_name`, `typeIn_desc`, `typeIn_state`) VALUES
 ('7iKfiK9WWNeWihUQ4wHLtoxhfdUuAP', 'Número de proyectos', '', 'Activo'),
+('pksMyCi6C1ylY1jJqAbXlbehyL5oqP', 'Productos del grupo y semillero de investigación', '', 'Activo'),
 ('uCfYTfncINM02uiot2hN5Fycu5u4Mw', 'Ponencias', '', 'Activo'),
 ('UmxH9zRO5FmB256hROHySkeFXAjkq4', 'Seminario de investigación', '', 'Activo'),
 ('V0QccldRsCzJ3iZ4Pl5A7eVtMW6t9V', 'Publicación', '', 'Activo');
@@ -174,7 +197,7 @@ INSERT INTO `type_indicator` (`typeIn_code`, `typeIn_name`, `typeIn_desc`, `type
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Estructura de tabla para la tabla `user`
 --
 
 DROP TABLE IF EXISTS `user`;
@@ -187,86 +210,92 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
--- Dumping data for table `user`
---
-
-INSERT INTO `user` (`user_code`, `user_name`, `user_lastName`, `user_email`, `user_password`) VALUES
-('OVFtles9xQVfmoP7gVmCe4f3JUJjJ2', 'Daniel', 'Cardona', 'daniel.eco18@gmail.com', '$2y$10$dkLpWsIzOUUIzFvQNoNshOl3DfRqLgg7U58snZXAJhiMk.ketm6VO');
-
---
--- Indexes for dumped tables
+-- Índices para tablas volcadas
 --
 
 --
--- Indexes for table `indicator`
+-- Indices de la tabla `indicator`
 --
 ALTER TABLE `indicator`
   ADD PRIMARY KEY (`ind_code`),
   ADD KEY `ind_typeIn_code` (`ind_typeIn_code`);
 
 --
--- Indexes for table `n_proyectos`
+-- Indices de la tabla `n_proyectos`
 --
 ALTER TABLE `n_proyectos`
   ADD PRIMARY KEY (`np_code`);
 
 --
--- Indexes for table `ponencias`
+-- Indices de la tabla `ponencias`
 --
 ALTER TABLE `ponencias`
   ADD PRIMARY KEY (`pon_code`),
   ADD KEY `pon_typeInd` (`pon_typeInd`);
 
 --
--- Indexes for table `publicacion`
+-- Indices de la tabla `productos`
+--
+ALTER TABLE `productos`
+  ADD PRIMARY KEY (`pro_code`),
+  ADD KEY `pro_typeInd` (`pro_typeInd`);
+
+--
+-- Indices de la tabla `publicacion`
 --
 ALTER TABLE `publicacion`
   ADD PRIMARY KEY (`pub_code`),
   ADD KEY `pub_typeInd` (`pub_typeInd`);
 
 --
--- Indexes for table `semillero_investigacion`
+-- Indices de la tabla `semillero_investigacion`
 --
 ALTER TABLE `semillero_investigacion`
   ADD PRIMARY KEY (`semI_code`),
   ADD KEY `seml_typeInd` (`seml_typeInd`);
 
 --
--- Indexes for table `type_indicator`
+-- Indices de la tabla `type_indicator`
 --
 ALTER TABLE `type_indicator`
   ADD PRIMARY KEY (`typeIn_code`);
 
 --
--- Indexes for table `user`
+-- Indices de la tabla `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`user_code`);
 
 --
--- Constraints for dumped tables
+-- Restricciones para tablas volcadas
 --
 
 --
--- Constraints for table `indicator`
+-- Filtros para la tabla `indicator`
 --
 ALTER TABLE `indicator`
   ADD CONSTRAINT `indicator_ibfk_1` FOREIGN KEY (`ind_typeIn_code`) REFERENCES `type_indicator` (`typeIn_code`) ON UPDATE CASCADE;
 
 --
--- Constraints for table `ponencias`
+-- Filtros para la tabla `ponencias`
 --
 ALTER TABLE `ponencias`
   ADD CONSTRAINT `ponencias_ibfk_1` FOREIGN KEY (`pon_typeInd`) REFERENCES `type_indicator` (`typeIn_code`) ON UPDATE CASCADE;
 
 --
--- Constraints for table `publicacion`
+-- Filtros para la tabla `productos`
+--
+ALTER TABLE `productos`
+  ADD CONSTRAINT `productos_ibfk_1` FOREIGN KEY (`pro_typeInd`) REFERENCES `type_indicator` (`typeIn_code`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `publicacion`
 --
 ALTER TABLE `publicacion`
   ADD CONSTRAINT `publicacion_ibfk_1` FOREIGN KEY (`pub_typeInd`) REFERENCES `type_indicator` (`typeIn_code`) ON UPDATE CASCADE;
 
 --
--- Constraints for table `semillero_investigacion`
+-- Filtros para la tabla `semillero_investigacion`
 --
 ALTER TABLE `semillero_investigacion`
   ADD CONSTRAINT `semillero_investigacion_ibfk_1` FOREIGN KEY (`seml_typeInd`) REFERENCES `type_indicator` (`typeIn_code`) ON UPDATE CASCADE;
