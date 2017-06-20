@@ -5,9 +5,9 @@
                 <tr class="main-fila">
                     <th>Item</th>
                     <th>Título de Investigación</th>
-                    <th>Entidad</th>
+                    <th>Serial</th>
                     <th>Institución</th>
-                    <th width="120px">Acciones</th>
+                    <th width="100px">Acciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -19,7 +19,7 @@
                 <tr>
                     <td><?php echo $item; ?></td>
                     <td><?php echo $row["np_tituloInvestigacion"]; ?></td>
-                    <td><?php echo $row["np_Entidad"]; ?></td>
+                    <td><?php echo $row["np_Serial"]; ?></td>
                     <td><?php echo $row["np_institucion"]; ?></td>
                     <td>
                         <a href="index.php?c=proyectos&a=update&token=<?php echo $row['np_code'];?>" class="icon-table">

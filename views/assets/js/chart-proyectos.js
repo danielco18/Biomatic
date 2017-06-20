@@ -20,7 +20,7 @@
                 ]
             }, {
                 label: 'Confinanciados x Empresas',
-                backgroundColor: '#00897b',
+                backgroundColor: '#00796b',
                 data: [
                     data[0]["2012"][1],
                     data[1]["2013"][1],
@@ -33,7 +33,7 @@
                 ]
             }, {
                 label: 'Confinanciación de otras entidades',
-                backgroundColor: '#80cbc4',
+                backgroundColor: '#009688',
                 data: [
                     data[0]["2012"][2],
                     data[1]["2013"][2],

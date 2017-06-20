@@ -13,12 +13,12 @@
 
         public function createProyectos($data){
             try {
-                $sql = "INSERT INTO n_proyectos VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+                $sql = "INSERT INTO n_proyectos VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
                 $query = $this->pdo->prepare($sql);
                 $query->execute(array(
-                        $data[19],$data[0],$data[1],$data[2],$data[3],$data[4],$data[5],$data[6],
+                        $data[20],$data[0],$data[1],$data[2],$data[3],$data[4],$data[5],$data[6],
                         $data[7],$data[8],$data[9],$data[10],$data[11],$data[12],$data[13],$data[14],
-                        $data[15],$data[16],$data[17],$data[18],$data[20]
+                        $data[15],$data[16],$data[17],$data[18],$data[19],$data[21]
                         ));
                 $result = "Datos ingresados correctamente";
             } catch (PDOException $e) {
@@ -55,6 +55,7 @@
             try {
                 $sql = "UPDATE n_proyectos SET
                         np_tipoInvestigacion = ?,
+                        np_Serial = ?,
                         np_tituloInvestigacion = ?,
                         np_alcanceInvestigacion = ?,
                         np_Entidad = ?,
@@ -78,7 +79,7 @@
                 $query->execute(array(
                 $data[0],$data[1],$data[2],$data[3],$data[4],$data[5],$data[6],$data[7],
                 $data[8],$data[9],$data[10],$data[11],$data[12],$data[13],$data[14],$data[15],
-                $data[16],$data[17],$data[18],$data[19]));
+                $data[16],$data[17],$data[18],$data[19],$data[20]));
                 $result = "Datos actualizados correctamente";
             } catch (PDOException $e) {
                 die($e->getMessage()." ".$e->getLine()." ".$e->getFile());
@@ -100,10 +101,10 @@
 
         public function readProyectosIn2012(){
             try {
-                $sql = "SELECT 
-                            SUM(CASE WHEN np_Entidad= 'SENA'  AND dates = 
+                $sql = "SELECT
+                            SUM(CASE WHEN np_Entidad= 'SENA'  AND dates =
                             '2012' THEN 1 ELSE 0 END) SENA,
-                            SUM(CASE WHEN np_Entidad = 'Cofinanciados x Empresas' AND dates = '2012'  THEN 1 ELSE 0 END) Cofinanciados, 
+                            SUM(CASE WHEN np_Entidad = 'Cofinanciados x Empresas' AND dates = '2012'  THEN 1 ELSE 0 END) Cofinanciados,
                             SUM(CASE WHEN np_Entidad= 'Cofinanciación de otras entidades'  AND dates = '2012' THEN 1 ELSE 0 END) Cofinanciación
                         FROM n_proyectos ORDER BY np_Entidad";
                 $query = $this->pdo->prepare($sql);
@@ -112,7 +113,7 @@
             } catch (PDOException $e) {
                 die($e->getMessage()." ".$e->getLine()." ".$e->getFile());
             }
-            $result = array('2012' => 
+            $result = array('2012' =>
                                 [$result[0][0],
                                 $result[0][1],
                                 $result[0][2]]
@@ -122,10 +123,10 @@
 
         public function readProyectosIn2013(){
             try {
-                $sql = "SELECT 
-                            SUM(CASE WHEN np_Entidad= 'SENA'  AND dates = 
+                $sql = "SELECT
+                            SUM(CASE WHEN np_Entidad= 'SENA'  AND dates =
                             '2013' THEN 1 ELSE 0 END) SENA,
-                            SUM(CASE WHEN np_Entidad = 'Cofinanciados x Empresas' AND dates = '2013'  THEN 1 ELSE 0 END) Cofinanciados, 
+                            SUM(CASE WHEN np_Entidad = 'Cofinanciados x Empresas' AND dates = '2013'  THEN 1 ELSE 0 END) Cofinanciados,
                             SUM(CASE WHEN np_Entidad= 'Cofinanciación de otras entidades'  AND dates = '2013' THEN 1 ELSE 0 END) Cofinanciación
                         FROM n_proyectos ORDER BY np_Entidad";
                 $query = $this->pdo->prepare($sql);
@@ -134,7 +135,7 @@
             } catch (PDOException $e) {
                 die($e->getMessage()." ".$e->getLine()." ".$e->getFile());
             }
-            $result = array('2013' => 
+            $result = array('2013' =>
                                 [$result[0][0],
                                 $result[0][1],
                                 $result[0][2]]
@@ -144,10 +145,10 @@
 
         public function readProyectosIn2014(){
             try {
-                $sql = "SELECT 
-                            SUM(CASE WHEN np_Entidad= 'SENA'  AND dates = 
+                $sql = "SELECT
+                            SUM(CASE WHEN np_Entidad= 'SENA'  AND dates =
                             '2014' THEN 1 ELSE 0 END) SENA,
-                            SUM(CASE WHEN np_Entidad = 'Cofinanciados x Empresas' AND dates = '2014'  THEN 1 ELSE 0 END) Cofinanciados, 
+                            SUM(CASE WHEN np_Entidad = 'Cofinanciados x Empresas' AND dates = '2014'  THEN 1 ELSE 0 END) Cofinanciados,
                             SUM(CASE WHEN np_Entidad= 'Cofinanciación de otras entidades'  AND dates = '2014' THEN 1 ELSE 0 END) Cofinanciación
                         FROM n_proyectos ORDER BY np_Entidad";
                 $query = $this->pdo->prepare($sql);
@@ -156,7 +157,7 @@
             } catch (PDOException $e) {
                 die($e->getMessage()." ".$e->getLine()." ".$e->getFile());
             }
-            $result = array('2014' => 
+            $result = array('2014' =>
                                 [$result[0][0],
                                 $result[0][1],
                                 $result[0][2]]
@@ -166,10 +167,10 @@
 
         public function readProyectosIn2015(){
             try {
-                $sql = "SELECT 
-                            SUM(CASE WHEN np_Entidad= 'SENA'  AND dates = 
+                $sql = "SELECT
+                            SUM(CASE WHEN np_Entidad= 'SENA'  AND dates =
                             '2015' THEN 1 ELSE 0 END) SENA,
-                            SUM(CASE WHEN np_Entidad = 'Cofinanciados x Empresas' AND dates = '2015'  THEN 1 ELSE 0 END) Cofinanciados, 
+                            SUM(CASE WHEN np_Entidad = 'Cofinanciados x Empresas' AND dates = '2015'  THEN 1 ELSE 0 END) Cofinanciados,
                             SUM(CASE WHEN np_Entidad= 'Cofinanciación de otras entidades'  AND dates = '2015' THEN 1 ELSE 0 END) Cofinanciación
                         FROM n_proyectos ORDER BY np_Entidad";
                 $query = $this->pdo->prepare($sql);
@@ -178,7 +179,7 @@
             } catch (PDOException $e) {
                 die($e->getMessage()." ".$e->getLine()." ".$e->getFile());
             }
-            $result = array('2015' => 
+            $result = array('2015' =>
                                 [$result[0][0],
                                 $result[0][1],
                                 $result[0][2]]
@@ -188,10 +189,10 @@
 
         public function readProyectosIn2016(){
             try {
-                $sql = "SELECT 
-                            SUM(CASE WHEN np_Entidad= 'SENA'  AND dates = 
+                $sql = "SELECT
+                            SUM(CASE WHEN np_Entidad= 'SENA'  AND dates =
                             '2016' THEN 1 ELSE 0 END) SENA,
-                            SUM(CASE WHEN np_Entidad = 'Cofinanciados x Empresas' AND dates = '2016'  THEN 1 ELSE 0 END) Cofinanciados, 
+                            SUM(CASE WHEN np_Entidad = 'Cofinanciados x Empresas' AND dates = '2016'  THEN 1 ELSE 0 END) Cofinanciados,
                             SUM(CASE WHEN np_Entidad= 'Cofinanciación de otras entidades'  AND dates = '2016' THEN 1 ELSE 0 END) Cofinanciación
                         FROM n_proyectos ORDER BY np_Entidad";
                 $query = $this->pdo->prepare($sql);
@@ -200,7 +201,7 @@
             } catch (PDOException $e) {
                 die($e->getMessage()." ".$e->getLine()." ".$e->getFile());
             }
-            $result = array('2016' => 
+            $result = array('2016' =>
                                 [$result[0][0],
                                 $result[0][1],
                                 $result[0][2]]
@@ -210,10 +211,10 @@
 
         public function readProyectosIn2017(){
             try {
-                $sql = "SELECT 
-                            SUM(CASE WHEN np_Entidad= 'SENA'  AND dates = 
+                $sql = "SELECT
+                            SUM(CASE WHEN np_Entidad= 'SENA'  AND dates =
                             '2017' THEN 1 ELSE 0 END) SENA,
-                            SUM(CASE WHEN np_Entidad = 'Cofinanciados x Empresas' AND dates = '2017'  THEN 1 ELSE 0 END) Cofinanciados, 
+                            SUM(CASE WHEN np_Entidad = 'Cofinanciados x Empresas' AND dates = '2017'  THEN 1 ELSE 0 END) Cofinanciados,
                             SUM(CASE WHEN np_Entidad= 'Cofinanciación de otras entidades'  AND dates = '2017' THEN 1 ELSE 0 END) Cofinanciación
                         FROM n_proyectos ORDER BY np_Entidad";
                 $query = $this->pdo->prepare($sql);
@@ -222,7 +223,7 @@
             } catch (PDOException $e) {
                 die($e->getMessage()." ".$e->getLine()." ".$e->getFile());
             }
-            $result = array('2017' => 
+            $result = array('2017' =>
                                 [$result[0][0],
                                 $result[0][1],
                                 $result[0][2]]
@@ -232,10 +233,10 @@
 
         public function readProyectosIn2018(){
             try {
-                $sql = "SELECT 
-                            SUM(CASE WHEN np_Entidad= 'SENA'  AND dates = 
+                $sql = "SELECT
+                            SUM(CASE WHEN np_Entidad= 'SENA'  AND dates =
                             '2018' THEN 1 ELSE 0 END) SENA,
-                            SUM(CASE WHEN np_Entidad = 'Cofinanciados x Empresas' AND dates = '2018'  THEN 1 ELSE 0 END) Cofinanciados, 
+                            SUM(CASE WHEN np_Entidad = 'Cofinanciados x Empresas' AND dates = '2018'  THEN 1 ELSE 0 END) Cofinanciados,
                             SUM(CASE WHEN np_Entidad= 'Cofinanciación de otras entidades'  AND dates = '2018' THEN 1 ELSE 0 END) Cofinanciación
                         FROM n_proyectos ORDER BY np_Entidad";
                 $query = $this->pdo->prepare($sql);
@@ -244,7 +245,7 @@
             } catch (PDOException $e) {
                 die($e->getMessage()." ".$e->getLine()." ".$e->getFile());
             }
-            $result = array('2018' => 
+            $result = array('2018' =>
                                 [$result[0][0],
                                 $result[0][1],
                                 $result[0][2]]
@@ -254,9 +255,9 @@
 
         public function readProyectosTotal(){
             try {
-                $sql = "SELECT 
+                $sql = "SELECT
                             SUM(CASE WHEN np_Entidad= 'SENA' THEN 1 ELSE 0 END) SENA,
-                            SUM(CASE WHEN np_Entidad = 'Cofinanciados x Empresas' THEN 1 ELSE 0 END) Cofinanciados, 
+                            SUM(CASE WHEN np_Entidad = 'Cofinanciados x Empresas' THEN 1 ELSE 0 END) Cofinanciados,
                             SUM(CASE WHEN np_Entidad= 'Cofinanciación de otras entidades' THEN 1 ELSE 0 END) Cofinanciación
                         FROM n_proyectos ORDER BY np_Entidad";
                 $query = $this->pdo->prepare($sql);
@@ -265,7 +266,7 @@
             } catch (PDOException $e) {
                 die($e->getMessage()." ".$e->getLine()." ".$e->getFile());
             }
-            $result = array('Total' => 
+            $result = array('Total' =>
                                 [$result[0][0],
                                 $result[0][1],
                                 $result[0][2]]

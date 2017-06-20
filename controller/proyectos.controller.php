@@ -27,8 +27,8 @@
 
         public function create(){
             $data = $_POST["data"];
-            $data[19] = randAlphaNum('30');
-            $data[20] = "7iKfiK9WWNeWihUQ4wHLtoxhfdUuAP";
+            $data[20] = randAlphaNum('30');
+            $data[21] = "7iKfiK9WWNeWihUQ4wHLtoxhfdUuAP";
             $result = $this->ProyectosM->createProyectos($data);
             header("Location: index.php?c=proyectos&msn=$result");
         }

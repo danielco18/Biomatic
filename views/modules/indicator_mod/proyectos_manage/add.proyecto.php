@@ -16,16 +16,28 @@
                 </div>
                 <div class="form-signIn">
                     <div class="row">
-                        <div class="col">
+                        <div class="col-3">
                             <div class="form-group">
                                 <label for="" class="form-label">Tipo de Investigación</label>
-                                <input type="text" name="data[0]" class="form-control form-input">
+                                <select name="data[0]" class="form-control form-input">
+                                    <option value="Investigación">Investigación</option>
+                                    <option value="Innovación">Innovación</option>
+                                    <option value="Fortalecimiento tecnológico">Fortalecimiento tecnológico</option>
+                                    <option value="Mordernización">Mordernización</option>
+                                    <option value="Divulgación">Divulgación</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="form-group">
+                                <label for="" class="form-label">Serial</label>
+                                <input type="text" name="data[1]" class="form-control form-input">
                             </div>
                         </div>
                         <div class="col">
                             <div class="form-group">
                                 <label for="" class="form-label">Título de Investigación</label>
-                                <input type="text" name="data[1]" class="form-control form-input">
+                                <input type="text" name="data[2]" class="form-control form-input">
                             </div>
                         </div>
                     </div>
@@ -33,13 +45,13 @@
                         <div class="col-2">
                             <div class="form-group">
                                 <label for="" class="form-label">Alcance</label>
-                                <input type="text" name="data[2]" class="form-control form-input">
+                                <input type="text" name="data[3]" class="form-control form-input">
                             </div>
                         </div>
                         <div class="col-4">
                             <div class="form-group">
                                 <label for="" class="form-label">Entidad</label>
-                                <select name="data[3]" class="form-control form-input">
+                                <select name="data[4]" class="form-control form-input">
                                     <option value="SENA">SENA</option>
                                     <option value="Cofinanciados x Empresas">Cofinanciados x Empresas</option>
                                     <option value="Cofinanciación de otras entidades">Cofinanciación de otras entidades</option>
@@ -49,7 +61,7 @@
                         <div class="col">
                             <div class="form-group">
                                 <label for="" class="form-label">Institución</label>
-                                <input type="text" name="data[4]" class="form-control form-input">
+                                <input type="text" name="data[5]" class="form-control form-input">
                             </div>
                         </div>
                     </div>
@@ -57,13 +69,13 @@
                         <div class="col">
                             <div class="form-group">
                                 <label for="" class="form-label">Carácter de la Institución</label>
-                                <input type="text" name="data[5]" class="form-control form-input">
+                                <input type="text" name="data[6]" class="form-control form-input">
                             </div>
                         </div>
                         <div class="col">
                             <div class="form-group">
                                 <label for="" class="form-label">Investigadores</label>
-                                <input type="text" name="data[6]" class="form-control form-input">
+                                <input type="text" name="data[7]" class="form-control form-input">
                             </div>
                         </div>
                     </div>
@@ -71,13 +83,13 @@
                         <div class="col">
                             <div class="form-group">
                                 <label for="" class="form-label">Coinvestigadores</label>
-                                <input type="text" name="data[7]" class="form-control form-input">
+                                <input type="text" name="data[8]" class="form-control form-input">
                             </div>
                         </div>
                         <div class="col">
                             <div class="form-group">
                                 <label for="" class="form-label">Aprendices Involucrados</label>
-                                <input type="text" name="data[8]" class="form-control form-input">
+                                <input type="text" name="data[9]" class="form-control form-input">
                             </div>
                         </div>
                     </div>
@@ -85,13 +97,13 @@
                         <div class="col">
                             <div class="form-group">
                                 <label for="" class="form-label">Nombre y Documento</label>
-                                <input type="text" name="data[9]" class="form-control form-input">
+                                <input type="text" name="data[10]" class="form-control form-input">
                             </div>
                         </div>
                         <div class="col">
                             <div class="form-group">
                                 <label for="" class="form-label">Programa de formación</label>
-                                <input type="text" name="data[10]" class="form-control form-input">
+                                <input type="text" name="data[11]" class="form-control form-input">
                             </div>
                         </div>
                     </div>
@@ -99,13 +111,13 @@
                         <div class="col">
                             <div class="form-group">
                                 <label for="" class="form-label">Soporte</label>
-                                <input type="text" name="data[11]" class="form-control form-input">
+                                <input type="text" name="data[12]" class="form-control form-input">
                             </div>
                         </div>
                         <div class="col">
                             <div class="form-group">
                                 <label for="" class="form-label">Objetivos Investigación</label>
-                                <input type="text" name="data[12]" class="form-control form-input">
+                                <input type="text" name="data[13]" class="form-control form-input">
                             </div>
                         </div>
                     </div>
@@ -113,13 +125,13 @@
                         <div class="col">
                             <div class="form-group">
                                 <label for="" class="form-label">Resultados Esperados</label>
-                                <input type="text" name="data[13]" class="form-control form-input">
+                                <input type="text" name="data[14]" class="form-control form-input">
                             </div>
                         </div>
                         <div class="col">
                             <div class="form-group">
                                 <label for="" class="form-label">Resultados Obtenidos</label>
-                                <input type="text" name="data[14]" class="form-control form-input">
+                                <input type="text" name="data[15]" class="form-control form-input">
                             </div>
                         </div>
                     </div>
@@ -127,14 +139,14 @@
                         <div class="col">
                             <div class="form-group">
                                 <label for="" class="form-label">Cobertura</label>
-                                <input type="text" name="data[15]" class="form-control form-input">
+                                <input type="text" name="data[16]" class="form-control form-input">
                             </div>
                         </div>
                         <div class="col">
                             <div class="form-group">
                                 <div class="form-group">
                                     <label for="" class="form-label">Año</label>
-                                    <select class="form-control form-input form-select" name="data[16]">
+                                    <select class="form-control form-input form-select" name="data[17]">
                                         <option value="2012">2012</option>
                                         <option value="2013">2013</option>
                                         <option value="2014">2014</option>
@@ -151,13 +163,13 @@
                         <div class="col">
                             <div class="form-group">
                                 <label for="" class="form-label">Fecha Inicio</label>
-                                <input type="text" name="data[17]" class="form-control form-input">
+                                <input type="text" name="data[18]" class="form-control form-input">
                             </div>
                         </div>
                         <div class="col">
                             <div class="form-group">
                                 <label for="" class="form-label">Fecha Fin</label>
-                                <input type="text" name="data[18]" class="form-control form-input">
+                                <input type="text" name="data[19]" class="form-control form-input">
                             </div>
                         </div>
                     </div>
