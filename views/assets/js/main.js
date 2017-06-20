@@ -1,9 +1,11 @@
+// se utilizan librerias y/o frameworks como Jquery, sweetaler, chartjs, boostrap, tether y DataTable
+// mostrar un tooltip
 $('[data-toggle="tooltip"]').tooltip()
-
+// ocultar y mostrar menu en responsive
 $('#menu-icon').click(function(){
     $('.menu-responsive-container').toggleClass('hidden')
 });
-
+// metodo para modificar la tabla de la libreria DataTable
 $.extend( true, $.fn.dataTable.defaults, {
     "ordering": true,
     "lengthChange": false,
@@ -24,13 +26,13 @@ $('#dataTable').DataTable({
         }
     }
 });
-
-
+// Acá se temina la edicion
+// metodo para borrar los mensajes de error generados cuando se le de clic en los input con la clase email
 $(".email").focus(function(){
    $(".email").siblings("small").remove();
    $(".form-button").attr("disabled",false);
 })
-
+// metodo para generar mensajes si el correo ya existe en la aplicación
 $('#emailSignUp').focusout(function(){
     $('#emailSignUp').siblings("small").remove();
     var data = $('#emailSignUp').val();
@@ -46,7 +48,7 @@ $('#emailSignUp').focusout(function(){
         });
     }
 })
-
+// Enviar los datos al controlador de usuario para que se registre
 $("#signUp").submit(function(e){
     e.preventDefault();
     var data =  [
@@ -68,7 +70,7 @@ $("#signUp").submit(function(e){
         }
     })
 })
-
+// metodo para generar mensajes si el correo no existe en la aplicación
 $('#emailSignIn').focusout(function(){
     $('#emailSignIn').siblings("small").remove();
     var data = $('#emailSignIn').val();
@@ -84,7 +86,7 @@ $('#emailSignIn').focusout(function(){
         });
     }
 })
-
+// para que se loguea en la aplicacion
 $("#signIn").submit(function(e){
     e.preventDefault();
     $('#passSignIn').siblings("small").remove();

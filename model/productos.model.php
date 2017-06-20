@@ -49,15 +49,15 @@
 
         public function updateProductos($data){
             try {
-                $sql = "UPDATE productos SET 
+                $sql = "UPDATE productos SET
                         pro_nombre = ?,
                         pro_tipoProducto = ?,
-                        pro_autores = ?, 
-                        pro_programaFormacion = ?, 
-                        pro_proyectosAsociados = ?, 
-                        pro_horasSemales = ?, 
-                        pro_Productos = ?, 
-                        dates = ? 
+                        pro_autores = ?,
+                        pro_programaFormacion = ?,
+                        pro_proyectosAsociados = ?,
+                        pro_horasSemales = ?,
+                        pro_Productos = ?,
+                        dates = ?
                         WHERE pro_code = ?";
                 $query = $this->pdo->prepare($sql);
                 $query->execute(array($data[0],$data[1],$data[2],$data[3],$data[4],$data[5],$data[6],$data[7],$data[8]));
@@ -79,12 +79,12 @@
             }
             return $result;
         }
-
+        // Se crea solo un metodo para consultar los tipo de productos por año y se retorna una matriz
         public function readProductosIn2016(){
             try {
-                $sql = "SELECT 
-                           SUM(CASE WHEN pro_tipoProducto = 'Nueva variedad'  AND dates = '2016' THEN 1 ELSE 0 END) NuevaVariedad, 
-                           SUM(CASE WHEN pro_tipoProducto = 'Producto tecnológico' AND dates = '2016'  THEN 1 ELSE 0 END) ProductoTecno, 
+                $sql = "SELECT
+                           SUM(CASE WHEN pro_tipoProducto = 'Nueva variedad'  AND dates = '2016' THEN 1 ELSE 0 END) NuevaVariedad,
+                           SUM(CASE WHEN pro_tipoProducto = 'Producto tecnológico' AND dates = '2016'  THEN 1 ELSE 0 END) ProductoTecno,
                            SUM(CASE WHEN pro_tipoProducto = 'Prototipo'  AND dates = '2016' THEN 1 ELSE 0 END) Prototipo,
                            SUM(CASE WHEN pro_tipoProducto = 'Signos distintivos'  AND dates = '2016' THEN 1 ELSE 0 END) SignosDis,
                            SUM(CASE WHEN pro_tipoProducto = 'Software'  AND dates = '2016' THEN 1 ELSE 0 END) Software,
@@ -101,7 +101,7 @@
             } catch (PDOException $e) {
                 die($e->getMessage()." ".$e->getLine()." ".$e->getFile());
             }
-            $result = array('2016' => 
+            $result = array('2016' =>
                                 [$result[0][0],
                                 $result[0][1],
                                 $result[0][2],
@@ -119,9 +119,9 @@
 
         public function readProductosIn2017(){
             try {
-                $sql = "SELECT 
-                           SUM(CASE WHEN pro_tipoProducto = 'Nueva variedad'  AND dates = '2017' THEN 1 ELSE 0 END) NuevaVariedad, 
-                           SUM(CASE WHEN pro_tipoProducto = 'Producto tecnológico' AND dates = '2017'  THEN 1 ELSE 0 END) ProductoTecno, 
+                $sql = "SELECT
+                           SUM(CASE WHEN pro_tipoProducto = 'Nueva variedad'  AND dates = '2017' THEN 1 ELSE 0 END) NuevaVariedad,
+                           SUM(CASE WHEN pro_tipoProducto = 'Producto tecnológico' AND dates = '2017'  THEN 1 ELSE 0 END) ProductoTecno,
                            SUM(CASE WHEN pro_tipoProducto = 'Prototipo'  AND dates = '2017' THEN 1 ELSE 0 END) Prototipo,
                            SUM(CASE WHEN pro_tipoProducto = 'Signos distintivos'  AND dates = '2017' THEN 1 ELSE 0 END) SignosDis,
                            SUM(CASE WHEN pro_tipoProducto = 'Software'  AND dates = '2017' THEN 1 ELSE 0 END) Software,
@@ -138,7 +138,7 @@
             } catch (PDOException $e) {
                 die($e->getMessage()." ".$e->getLine()." ".$e->getFile());
             }
-            $result = array('2017' => 
+            $result = array('2017' =>
                                 [$result[0][0],
                                 $result[0][1],
                                 $result[0][2],
@@ -156,9 +156,9 @@
 
         public function readProductosIn2018(){
             try {
-                $sql = "SELECT 
-                           SUM(CASE WHEN pro_tipoProducto = 'Nueva variedad'  AND dates = '2018' THEN 1 ELSE 0 END) NuevaVariedad, 
-                           SUM(CASE WHEN pro_tipoProducto = 'Producto tecnológico' AND dates = '2018'  THEN 1 ELSE 0 END) ProductoTecno, 
+                $sql = "SELECT
+                           SUM(CASE WHEN pro_tipoProducto = 'Nueva variedad'  AND dates = '2018' THEN 1 ELSE 0 END) NuevaVariedad,
+                           SUM(CASE WHEN pro_tipoProducto = 'Producto tecnológico' AND dates = '2018'  THEN 1 ELSE 0 END) ProductoTecno,
                            SUM(CASE WHEN pro_tipoProducto = 'Prototipo'  AND dates = '2018' THEN 1 ELSE 0 END) Prototipo,
                            SUM(CASE WHEN pro_tipoProducto = 'Signos distintivos'  AND dates = '2018' THEN 1 ELSE 0 END) SignosDis,
                            SUM(CASE WHEN pro_tipoProducto = 'Software'  AND dates = '2018' THEN 1 ELSE 0 END) Software,
@@ -175,7 +175,7 @@
             } catch (PDOException $e) {
                 die($e->getMessage()." ".$e->getLine()." ".$e->getFile());
             }
-            $result = array('2018' => 
+            $result = array('2018' =>
                                 [$result[0][0],
                                 $result[0][1],
                                 $result[0][2],
@@ -193,14 +193,14 @@
 
         public function readProductosTotal(){
             try {
-                $sql = "SELECT 
-                           SUM(CASE WHEN pro_tipoProducto = 'Nueva variedad'  THEN 1 ELSE 0 END) NuevaVariedad, 
-                           SUM(CASE WHEN pro_tipoProducto = 'Producto tecnológico' THEN 1 ELSE 0 END) ProductoTecno, 
+                $sql = "SELECT
+                           SUM(CASE WHEN pro_tipoProducto = 'Nueva variedad'  THEN 1 ELSE 0 END) NuevaVariedad,
+                           SUM(CASE WHEN pro_tipoProducto = 'Producto tecnológico' THEN 1 ELSE 0 END) ProductoTecno,
                            SUM(CASE WHEN pro_tipoProducto = 'Prototipo' THEN 1 ELSE 0 END) Prototipo,
                            SUM(CASE WHEN pro_tipoProducto = 'Signos distintivos' THEN 1 ELSE 0 END) SignosDis,
-                           SUM(CASE WHEN pro_tipoProducto = 'Software' 
+                           SUM(CASE WHEN pro_tipoProducto = 'Software'
                                 THEN 1 ELSE 0 END) Software,
-                           SUM(CASE WHEN pro_tipoProducto = 'Patente' 
+                           SUM(CASE WHEN pro_tipoProducto = 'Patente'
                                 THEN 1 ELSE 0 END) Patente,
                            SUM(CASE WHEN pro_tipoProducto = 'Modelos de utilidad' THEN 1 ELSE 0 END) ModelosUtil,
                            SUM(CASE WHEN pro_tipoProducto = 'Talleres de creación' THEN 1 ELSE 0 END) TalleresCrea,
@@ -214,7 +214,7 @@
             } catch (PDOException $e) {
                 die($e->getMessage()." ".$e->getLine()." ".$e->getFile());
             }
-            $result = array('Total' => 
+            $result = array('Total' =>
                                 [$result[0][0],
                                 $result[0][1],
                                 $result[0][2],
@@ -229,9 +229,6 @@
                             );
             return $result;
         }
-
-
-
 
         public function __DESTRUCT(){
             DataBase::disconnect();

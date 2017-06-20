@@ -1,6 +1,7 @@
                             <?php
                                 require_once 'views/include/dashboard.php';
                                 $Indicator = $this->IndicatorM->readIndByCode($data);
+                                // capturo el token que me mandan por GET y hago una consulta de ese token para mostrar los datos que estan en la bd
                             ?>
                             <div class="text-dashboard">
                                 <h2 class="dashboard-texto">Gestionar Inidicador</h2>
@@ -17,7 +18,7 @@
                                                     <div class="form-group">
                                                         <label for="" class="form-label">Tipo Indicador</label>
                                                         <select class="form-control form-input" name="data[]">
-                                                            <option selected value="<?php echo $Indicator['ind_typeIn_code'];?>">Elige una opción</option>
+                                                            <option selected value="<?php echo $Indicator['ind_typeIn_code']; // imprimo el valor que esta la base de datos dependiendo del token?>">Elige una opción</option>
                                                             <?php
                                                             foreach ($this->IndicatorM->readTypeInd() as $row){
                                                                 ?>

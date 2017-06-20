@@ -73,7 +73,7 @@ $query->execute(array($data[0],$data[1],$data[2],$data[3],$data[4],$data[5],$dat
 
 
         // Gráficas
-
+        // metodos para consultar datos para mostrar en las gráficas
         public function readPonenciasRegionales2012(){
             try {
                 $sql = "SELECT COUNT(pon_code) FROM ponencias
@@ -370,6 +370,8 @@ $query->execute(array($data[0],$data[1],$data[2],$data[3],$data[4],$data[5],$dat
             }
             return $result;
         }
+
+        // aca terminan los metodos de consultas para las gráficas
         public function __DESTRUCT(){
             DataBase::disconnect();
         }

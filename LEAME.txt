@@ -1,0 +1,7 @@
+# Biomatic
+# IMPORTANTE: todos los controladores, modelos y vistas tienen la mismas lógica, para poder ver detallado la explicación los archivos son
+# indicator.controller.php, indicator.model.php, ponencias.controller.php, ponencias.model.php, productos.controller.php, productos.model.php, user.model.php, user.controller.php, db.model.php
+# dentro del modulo indicador, se miran las gestiones de indicador, ponencias y productos
+
+# MEJORAS DE LA APLICACIÓN
+# Las mejoras de la aplicación son que en estos momentos el software no es escalable debido al tiempo en el que se realizo, esta aplicación solo servira al finalizar 2018, también si se crea un indicador se debe crear un menú con dicho nombre, tambien el los programas de formacion se debe escoger más de un programa ya que a veces participan muchos aprendices de diferentes programas y que se puede crear un usuario dependiendo de los que esten involucrados en el indicador.

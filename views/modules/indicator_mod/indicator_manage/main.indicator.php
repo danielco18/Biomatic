@@ -13,6 +13,8 @@
                                     </thead>
                                     <tbody>
                                     <?php
+                                    // vista para mostrar informacion en una tabla
+                                        // hago una consulta de los indicadores para mostrarlos en una tabla y puede eliminar y modificar los datos si desea
                                         $item = 0;
                                         foreach ($this->IndicatorM->readInd() as $row){
                                             $item++;

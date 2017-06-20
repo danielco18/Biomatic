@@ -1,4 +1,8 @@
-                    <?php require_once 'views/include/dashboard.php'; ?>
+
+                        <?php
+                         require_once 'views/include/dashboard.php';
+                         // vista de las gráficas
+                        ?>
                         <div class="text-dashboard">
                             <h2 class="dashboard-texto">Gestionar Ponencias</h2>
                             <div class="chart-link volver-link">

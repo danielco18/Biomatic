@@ -1,4 +1,4 @@
-                        <?php require_once 'views/include/dashboard.php'; ?>
+                        <?php require_once 'views/include/dashboard.php';// vista de crear un indicador ?>
                             <div class="text-dashboard">
                                 <h2 class="dashboard-texto">Gestionar Inidicador</h2>
                             </div>
@@ -15,6 +15,7 @@
                                                         <label for="" class="form-label">Tipo indicador</label>
                                                         <select class="" name="data[]" class="form-control form-input form-select">
                                                             <?php
+                                                            // muestro los tipo indicadores por una consulta a la bd y los recorro con un foreach
                                                                 foreach ($this->IndicatorM->readTypeInd() as $row){
                                                             ?>
                                                                 <option value="<?php echo $row['typeIn_code']; ?>"><?php echo $row["typeIn_name"]; ?></option>

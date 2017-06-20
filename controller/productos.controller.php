@@ -54,18 +54,23 @@
             $result = $this->ProductosM->deleteProductos($data);
             header("Location: index.php?c=productos&msn=$result");
         }
-
+        // es el mismo metodo que el anterior pero minificado
         public function data(){
+            // Metodo para saber cuantos productos se ingresaron en 2016
             $readProductosIn2016 = $this->ProductosM->readProductosIn2016();
+            // Metodo para saber cuantos productos se ingresaron en 2017
             $readProductosIn2017 = $this->ProductosM->readProductosIn2017();
+            // Metodo para saber cuantos productos se ingresaron en 2018
             $readProductosIn2018 = $this->ProductosM->readProductosIn2018();
+            // Metodo para saber cuantos productos se ingresaron hasta el momento
             $readProductosTotal = $this->ProductosM->readProductosTotal();
+            // declaro una variable data para enviar los datos que cree arriba
             $data = array(  $readProductosIn2016,
                             $readProductosIn2017,
                             $readProductosIn2018,
                             $readProductosTotal
                         );
-            //echo $data[0]["2012"][0];
+            // envio por JSON una matriz para leerla en JavaScript y mostrarla en la vista del usuario
             echo json_encode($data);
         }
     }

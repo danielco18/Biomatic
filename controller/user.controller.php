@@ -12,19 +12,19 @@
             require_once 'views/modules/security_mod/user_manage/main.php';
             require_once 'views/include/footer.php';
         }
-
+        // metodo para mostrar un login
         public function signIn(){
             require_once 'views/include/header.php';
             require_once 'views/modules/security_mod/user_manage/signIn.php';
             require_once 'views/include/footer.php';
         }
-
+        // metodo para mostrar el registro
         public function signUp(){
             require_once 'views/include/header.php';
             require_once 'views/modules/security_mod/user_manage/signUp.php';
             require_once 'views/include/footer.php';
         }
-
+        // metodo para validar el email si existe en la base de datos
         public function validEmailSignUp(){
             $data = $_POST["data"];
             $result = $this->UserM->readUserByEmail($data);
@@ -35,7 +35,7 @@
             }
             echo json_encode($return);
         }
-
+        // metodo para validar el email si no existe en la base de datos
         public function validEmail(){
             $data = $_POST["data"];
             $response = $this->UserM->readUserByEmail($data);
@@ -46,7 +46,7 @@
             }
             echo json_encode($return);
         }
-
+        // metodo para que el usuario ingrese a la aplicacion
         public function validSignIn(){
             $data = $_POST["data"];
             $userData = $this->UserM->readUserByEmail($data[0]);
@@ -61,7 +61,7 @@
             }
             echo json_encode($return);
         }
-
+        // metodo para crear un usuario
         public function create(){
             $data = $_POST["data"];
             $data[5] = randAlphaNum('30');
@@ -78,11 +78,11 @@
             }
             echo json_encode($return);
         }
-
+        // metodo para ir a la dashboard
         public function dashboard(){
             header("Location: type-indicator");
         }
-
+        // METODO PARA CERRAR SESION
         public function close(){
             session_destroy();
             header("Location: home");
